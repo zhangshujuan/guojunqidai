@@ -1,0 +1,475 @@
+@import "base/common";
+@import "base/open-account-progress";
+@import "base/header-index";
+
+//  中间内容
+
+.content {
+  margin: 23px 0 35px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 6px #e9e8e8;
+  -moz-box-shadow: 0 0 6px #e9e8e8;
+  box-shadow: 0 0 6px #e9e8e8;
+  background: #fff;
+  .content-left {
+    float: left;
+    width: 746px;
+    background: #fff;
+    -webkit-box-shadow: 2px 0 8px 0 rgba(0,0,0,.15);
+    -moz-box-shadow: 2px 0 8px 0 rgba(0,0,0,.15);
+    box-shadow: 2px 0 8px 0 rgba(0,0,0,.15);
+    .progress {
+      height: 26px;
+      margin: 25px auto 42px auto;
+      background-color: #AAA;
+      width: 651px;
+      .title {
+        height: 100%;
+        color: #fff;
+        line-height: 26px;
+        float: left;
+        text-align: right;
+        padding-right: 14px;
+        background-image: url(../image/simulate_open_account_right_arrow.png);
+        background-repeat: no-repeat;
+        font-size: 12px;
+        background-position: 204.6px;
+        width: 203px;
+      }
+      .currentProgress {
+        background-color: #ff6c47;
+      }
+    }
+
+    .table-cart {
+      border-collapse: collapse;
+      margin: 25px 0px 30px 36px;
+      width: 684px;
+      th {
+        background: #f8f8f8;
+        border-bottom: 1px solid #eeeeee;
+        line-height: 38px;
+        height: 38px;
+        text-align: left;
+        &:first-child {
+          padding-left: 27px;
+        }
+      }
+      tr {
+        border-bottom: 1px solid #eeeeee;
+        &:first-child {
+          border: 1px solid #eeeeee;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        td {
+          padding: 23px 0px;
+          vertical-align: top;
+          input {
+            float: left;
+            border: 1px solid #eee;
+            width: 15px;
+            height: 15px;
+          }
+          input[type=checkbox]{
+            -webkit-appearance: checkbox;
+          }
+          .product-info {
+            a {
+              font-size: 14px;
+              color: #333;
+              float: left;
+              img {
+                width: 51px;
+                height: 51px;
+                margin: 0 11px;
+              }
+            }
+          }
+          .ft12 {
+            font-size: 12px;
+            color: #333;
+          }
+          .col-orange {
+            color: #ff6c47;
+          }
+          .del-row {
+            font-size: 12px;
+            color: #999;
+          }
+          .item-amount {
+            height: 25px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            a {
+              display: block;
+              height: 18px;
+              width: 13px;
+              border: 1px solid #e5e5e5;
+              background: #f0f0f0;
+              text-align: center;
+              line-height: 18px;
+              color: #444;
+              position: absolute;
+              top: 0;
+              background: #bbb;
+              border-color: #bbb;
+              color: #fff;
+              float: left;
+            }
+            .no-minus {
+              left: 0;
+            }
+            .plus {
+              left: 41px;
+            }
+            .text-amount {
+              padding: 4px 5px;
+              height: 10px;
+              line-height: 10px;
+              text-align: center;
+              position: absolute;
+              z-index: 2;
+              left: 14px;
+              top: 0;
+              border-color: #bbb;
+              color: #6c6c6c;
+              float: left;
+            }
+          }
+        }
+      }
+    }
+    .select-all {
+      .pull-left {
+        float: left;
+        span {
+          font-size: 14px;
+          color: #333;
+          margin: 0px 20px 0px 11px;
+        }
+        .item-del {
+          color: #999;
+          font-size: 14px;
+        }
+      }
+      .pull-right {
+        float: right;
+        font-size: 14px;
+        .ft24 {
+          font-size: 24px;
+        }
+      }
+    }
+    .btn-balance {
+      background: url("../image/btn-balance-104x44.png") no-repeat;
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+      line-height: 44px;
+      width: 104px;
+      height: 44px;
+      float: right;
+      margin: 14px 0px 200px 0px;
+    }
+
+    //确认订单信息
+    form{
+      margin: 35px 30px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #ededed;
+    }
+    .form-group{
+      margin-bottom: 12px;
+      label{
+        display: inline-block;
+        font-weight: 700;
+        height: 40px;
+        line-height: 40px;
+      }
+      input{
+        height: 40px;
+        line-height: 40px;
+        width: 257px;
+        border: 1px solid #aaaaaa;
+        border-radius: 5px;
+        padding-left: 10px;
+      }
+    }
+    .amount{
+      margin: 30px 30px 0px 30px;
+      .pull-left{
+        font-size: 12px;
+        color: #999;
+        float: left;
+        a{
+          text-decoration: underline;
+          color: #999;
+        }
+        .col-333{
+          color: #333;
+          font-size: 12px;
+          font-weight: 800;
+        }
+        &.block{
+          display: block;
+          width: 100%;
+        }
+      }
+      .pull-right{
+        font-size: 14px;
+        color: #333;
+        float: right;
+        .ft24.col-orange{
+          font-size: 24px;
+          color: #ff6c47;
+        }
+      }
+    }
+    .btn-submit{
+      margin-right: 30px;
+    }
+    //订单第三步
+    .text-center{
+      text-align: center;
+      margin: 50px 0px 42px 0px;
+    }
+    .code{
+      display: inline-block;
+      width: 224px;
+      height: 46px;
+      line-height: 46px;
+      background: #f4f4f4;
+      font-size: 18px;
+      color: #666;
+    }
+    .code-img{
+      display: inline-block;
+      margin:0px 15px 204px 93px ;
+      float: left;
+    }
+    .phone-img{
+      display: inline-block;
+      margin-top: 10px;
+      float: left;
+    }
+    //订单第三步支付失败成功
+    .center-container{
+      padding-top: 75px;
+      padding-bottom: 280px;
+      text-align: center;
+      img{
+        width:94px;
+        height: 94px;
+      }
+      .ft24{
+        font-size: 24px;
+        color: #666;
+        margin: 20px 0px 50px 0px;
+      }
+      table{
+        border-collapse: collapse;
+        width:276px;
+        margin: 0 auto 25px auto;
+        tr{
+          border:1px solid #f5f5f5;
+          td{
+            font-size: 12px;
+            color: #333;
+            line-height: 32px;
+          }
+          &:nth-child(odd){
+            background: #f5f5f5;
+          }
+        }
+      }
+      .btn-danger{
+        width: 108px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+        color: #fff;
+        background: #ff6e43;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+    //二维码失效
+    .relative{
+      position: relative;
+      width: 244px;
+      height: 244px;
+      display: inline-block;
+      margin: 0 15px 204px 93px;
+      float: left;
+      .ft14{
+        font-size: 14px;
+        color: #333;
+        position: absolute;
+        top:93px;
+        left: 82px;
+      }
+      .btn-danger{
+        position: absolute;
+        top:121px;
+        left: 69px;
+        width: 108px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+        color: #fff;
+        background: #ff6e43;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  //公共的标题样式
+  .common-title {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    height: 44px;
+    width: 100%;
+    box-sizing: border-box;
+    .bigTitle {
+      margin-left: 30px;
+      border-bottom: 3px solid #ff6c47;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 40px;
+      float: left;
+    }
+    .smallTitle {
+      font-size: 14px;
+      color: #999;
+      padding-top: 12px;
+      padding-left: 1px;
+      width: 345px;
+      float: left;
+      margin-left: 18px;
+      text-decoration: underline;
+    }
+    .pull-right {
+      font-size: 14px;
+      color: #333;
+      float: right;
+      padding-top: 12px;
+      margin-right: 25px;
+      a {
+        font-size: 14px;
+        color: #999;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .content-right {
+    float: right;
+    width: 220px;
+    padding: 0 15px 0 19px;
+    //min-height: 1099px;
+    .common-title {
+      .bigTitle {
+        margin-left: 0px;
+      }
+    }
+    ul {
+      li {
+        float: left;
+        width: 214px;
+        margin-top: 15px;
+        background-color: #fbfbfb;
+
+        .imgbox {
+          width: 214px;
+          height: 163px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .info-box {
+          border: 1px solid #ededed;
+          border-top: none;
+          padding: 0 10px 11px 10px;
+          overflow: hidden;
+
+          h1 {
+            margin-top: 9px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color333;
+          }
+
+          .price-box {
+            margin-top: 3px;
+
+            p {
+              font-size: 16px;
+              line-height: 20px;
+              font-weight: bolder;
+            }
+
+            .price-really {
+              float: left;
+              color: $color666;
+            }
+
+            .price-vip {
+              position: relative;
+              float: right;
+              color: #ff6c47;
+
+              &:after {
+                content: "";
+                @include position(absolute, 2, -11px, 0, none, none);
+                width: 19px;
+                height: 11px;
+                @include backgroundImage('../image/vip-19x11.png', no-repeat, center, center, 100%, 100%);
+              }
+            }
+          }
+
+          .desc {
+            margin-top: 4px;
+            height: 32px;
+            font-size: 12px;
+            color: $color666;
+            line-height: 16px;
+          }
+
+          .btn-box {
+            margin-top: 10px;
+
+            .btn-buy, .btn-add {
+              width: 94px;
+              height: 26px;
+              font-size: 12px;
+              color: $colorFFF;
+              line-height: 26px;
+              text-align: center;
+            }
+
+            .btn-buy {
+              float: left;
+              @include backgroundImage('../image/btn-buy-94x26.png', no-repeat, center, center, 100%, 100%);
+            }
+
+            .btn-add {
+              float: right;
+              @include backgroundImage('../image/btn-add-94x26.png', no-repeat, center, center, 100%, 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

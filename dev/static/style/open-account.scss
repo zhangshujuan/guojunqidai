@@ -1,0 +1,351 @@
+@import "base/common";
+@import "base/header-open-account";
+
+// =====================================================
+// open-account
+// =====================================================
+.open-account{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../image/open-account-bg-1600x521.jpg");
+  background-size:cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                  src='../image/open-account-bg-1600x521.jpg',
+                  sizingMethod='scale');
+  .container{
+    height: 521px;
+    overflow: hidden;
+  }
+
+  .service-time{
+    float: left;
+    width: 100%;
+    padding: 9px 0;
+    font-size: 12px;
+    color: $colorFFF;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .open-nav{
+    float: left;
+
+    ul{
+      margin: 3px 0 0 33px;
+
+      li{
+        position: relative;
+        background-color: $colorFFF;
+
+        a{
+          display: block;
+          width: 87px;
+          height: 36px;
+          padding-top: 51px;
+          border: 1px solid #ededed;
+          border-top: none;
+          font-size: 12px;
+          color: $color999;
+          text-align: center;
+        }
+
+        &:first-child{
+          a{
+            border-top: 1px solid #ededed;
+          }
+        }
+
+        &:before{
+          display: none;
+          content: "";
+          @include position(absolute, 2, -1px, none, none, 0);
+          width: 89px;
+          height: 3px;
+        }
+
+        &.active{
+          &:before{
+            display: block;
+          }
+        }
+
+        &.li-1{
+          @include backgroundImage('../image/open-nav-1.png', no-repeat, 32px, 16px, 24px, 24px);
+
+          &:before{
+            background-color: #ff4545;
+          }
+        }
+        &.li-2{
+          @include backgroundImage('../image/open-nav-2.png', no-repeat, 32px, 16px, 24px, 24px);
+
+          &:before{
+            background-color: #ff55a1;
+          }
+        }
+        &.li-3{
+          @include backgroundImage('../image/open-nav-3.png', no-repeat, 32px, 16px, 24px, 24px);
+
+          &:before{
+            background-color: #6692ff;
+          }
+        }
+        &.li-4{
+          @include backgroundImage('../image/open-nav-4.png', no-repeat, 32px, 16px, 24px, 24px);
+
+          &:before{
+            background-color: #9065ff;
+          }
+        }
+        &.li-5{
+          @include backgroundImage('../image/open-nav-5.png', no-repeat, 31px, 15px, 26px, 26px);
+
+          &:before{
+            background-color: #2992fd;
+          }
+        }
+      }
+    }
+  }
+
+  .open-web, .open-phone{
+    float: left;
+    width: 360px;
+    height: 448px;
+    margin: 0 0 0 12px;
+    background-color: #f1f1f1;
+    overflow: hidden;
+
+    h1{
+      font-size: 24px;
+      line-height: 36px;
+      color: $color333;
+      font-weight: bolder;
+      text-align: center;
+      margin-top: 21px;
+    }
+
+    .info-box{
+      position: relative;
+      width: 310px;
+      height: 275px;
+      margin: 95px auto 0;
+      background-color: $colorFFF;
+      border-top: 1px solid $colorFFF;
+      -webkit-box-shadow: 0 0 9px #e8e8e8;
+      -moz-box-shadow: 0 0 9px #e8e8e8;
+      box-shadow: 0 0 9px #e8e8e8;
+
+      .text{
+        font-size: 12px;
+        line-height: 24px;
+        color: $color666;
+        text-align: center;
+        font-weight: bolder;
+      }
+
+      .list{
+        margin-top: 25px;
+        padding: 0 20px;
+
+        ul{
+          li{
+            float: left;
+            padding-top: 26px;
+            font-size: 12px;
+            color: $color999;
+            line-height: 20px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .open-web{
+    .computer{
+      @include position(absolute, 2, -61px, none, none, 99px);
+      width: 118px;
+      height: 118px;
+      @include backgroundImage('../image/open-web-computer.png', no-repeat, center, center, 100%, 100%);
+    }
+
+    .btn-open{
+      display: block;
+      width: 190px;
+      height: 44px;
+      margin: 78px auto 0;
+      @include backgroundImage('../image/open-web-btn.png', no-repeat, center, center, 100%, 100%);
+    }
+
+    .info-box{
+      .text{
+        margin-top: 42px;
+      }
+
+      .list{
+        ul{
+          li{
+            width: 25%;
+
+            &.li-1{
+              @include backgroundImage('../image/open-web-icon-1.png', no-repeat, center, 5px, 24px, 18px);
+            }
+            &.li-2{
+              @include backgroundImage('../image/open-web-icon-2.png', no-repeat, center, 0, 20px, 24px);
+            }
+            &.li-3{
+              @include backgroundImage('../image/open-web-icon-3.png', no-repeat, center, 0, 14px, 24px);
+            }
+            &.li-4{
+              @include backgroundImage('../image/open-web-icon-4.png', no-repeat, center, 5px, 22px, 16px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .open-phone{
+    .mobile{
+      @include position(absolute, 2, -82px, none, none, 95px);
+      width: 121px;
+      height: 232px;
+      @include backgroundImage('../image/open-phone-mobile.png', no-repeat, center, center, 100%, 100%);
+      overflow: hidden;
+
+      img{
+        display: block;
+        width: 90px;
+        height: 90px;
+        margin: 79px 0 0 15px;
+      }
+    }
+
+    .info-box{
+      .text{
+        margin-top: 164px;
+      }
+
+      .list{
+        ul{
+          li{
+            width: 33.33%;
+
+            &.li-1{
+              @include backgroundImage('../image/open-phone-icon-1.png', no-repeat, center, 5px, 24px, 18px);
+            }
+            &.li-2{
+              @include backgroundImage('../image/open-phone-icon-2.png', no-repeat, center, 4px, 24px, 18px);
+            }
+            &.li-3{
+              @include backgroundImage('../image/open-phone-icon-3.png', no-repeat, center, 5px, 22px, 16px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .open-help{
+    float: left;
+    width: 110px;
+    margin-left: 16px;
+    overflow: hidden;
+
+    h1{
+      margin: 7px 0 17px 0;
+      font-size: 18px;
+      color: #cdeaff;
+      font-weight: bolder;
+    }
+
+    .question{
+      a{
+        display: block;
+        margin-bottom: 6px;
+        font-size: 12px;
+        line-height: 18px;
+        color: $colorFFF;
+        text-decoration: underline;
+      }
+    }
+
+    .btn-more{
+      display: block;
+      margin-top: 18px;
+      font-size: 12px;
+      line-height: 18px;
+      color: $colorFFF;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
+
+// =====================================================
+// trade-list
+// =====================================================
+.trade-list{
+  .container{
+    padding-bottom: 27px;
+    overflow: hidden;
+  }
+
+  .title{
+    float: left;
+    width: 95px;
+    padding-left: 40px;
+    margin: 18px;
+    font-size: 18px;
+    line-height: 36px;
+    color: $color333;
+    font-weight: bolder;
+  }
+
+  .list{
+    float: left;
+    width: 730px;
+    margin-top: 23px;
+
+    ul{
+      li{
+        margin-bottom: 5px;
+
+        p{
+          float: left;
+          padding-left: 18px;
+          line-height: 20px;
+          font-size: 12px;
+          color: $color666;
+
+          &.list-1{
+            @include backgroundImage('../image/trade-list-icon-1.png', no-repeat, left, center, 12px, 12px);
+          }
+          &.list-2{
+            @include backgroundImage('../image/trade-list-icon-2.png', no-repeat, left, center, 12px, 12px);
+          }
+          &.list-3{
+            @include backgroundImage('../image/trade-list-icon-3.png', no-repeat, left, center, 12px, 12px);
+          }
+          &.list-4{
+            @include backgroundImage('../image/trade-list-icon-4.png', no-repeat, left, center, 12px, 12px);
+          }
+        }
+
+        dl{
+          dt{
+            float: left;
+            margin-right: 4px;
+            line-height: 20px;
+            font-size: 12px;
+            color: $color999;
+          }
+        }
+      }
+    }
+  }
+}

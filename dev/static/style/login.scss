@@ -1,0 +1,136 @@
+@import "base/common";
+@import "base/header-open-account";
+@import "base/tradeCategory";
+
+.bg {
+  width: 100%;
+  height: 520px;
+  background-image: url("../image/blue-bgi-width-1600.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  @media (min-width: 1600px) {
+    background-size: 100%;
+  };
+}
+
+.pad {
+  width: 455px;
+  height: 448px;
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  margin: 42px auto 0;
+
+  .titleHolder {
+    .title {
+      border-bottom: 3px solid #ff6c47;
+      font-size: 18px;
+      font-weight: bold;
+      padding-top: 45px;
+      margin: 0 auto 24px;
+      line-height: 40px;
+      text-align: center;
+      width: 72px;
+    }
+  }
+
+  a {
+    color: rgb(255, 108, 71);
+    text-decoration: underline;
+    margin: 19px auto 35px;
+  }
+
+  #forgetPasswordLink {
+    display: block;
+    text-align: center;
+  }
+}
+
+.items {
+  .item {
+    height: 40px;
+    width: 268px;
+    margin: 12px auto;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+
+    .icon {
+      float: left;
+      background-color: #f8fcff;
+      border-right: 1px solid #d7e9fb;
+      height: 100%;
+      width: 37px;
+    }
+
+    input[type=text] {
+      height: 100%;
+      width: 266px - 38px;
+      padding-left: 12px;
+    }
+
+    &:nth-child(1) {
+      .icon {
+        background-image: url("../image/binding-icon-account.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &:nth-child(2) {
+      .icon {
+        background-image: url("../image/binding-icon-password.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 170px;
+      margin-left: 94px;
+      position: relative;
+
+      .icon {
+        background-image: url("../image/binding-icon-verify-code.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      input {
+        width: 168px - 38px;
+      }
+    }
+
+    img {
+      width: 76px;
+      height: 27px;
+      display: inline;
+      position: absolute;
+      bottom: 6px;
+      right: -90px;
+    }
+  }
+}
+
+#loginBtn {
+  width: 190px;
+  margin: 0 auto;
+  display: block;
+  height: 44px;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-image: url('../image/alert-login-btn.png');
+}
+
+.additionInfo {
+  height: 56px;
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1) inset;
+
+  p {
+    text-align: center;
+    color: $color666;
+    line-height: 56px;
+  }
+  margin-top: 21px;
+}

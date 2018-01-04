@@ -1,0 +1,267 @@
+@import "base/common";
+@import "base/open-account-progress";
+@import "base/header-index";
+
+//  中间内容
+
+.top-banner {
+  height: 170px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.content {
+  margin: 17px 0 35px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 6px #e9e8e8;
+  -moz-box-shadow: 0 0 6px #e9e8e8;
+  box-shadow: 0 0 6px #e9e8e8;
+  background: #fff;
+
+  .content-left {
+    float: left;
+    width: 682px;
+    background: #fff;
+    -webkit-box-shadow: 2px 0 8px 0 rgba(0, 0, 0, .15);
+    -moz-box-shadow: 2px 0 8px 0 rgba(0, 0, 0, .15);
+    box-shadow: 2px 0 8px 0 rgba(0, 0, 0, .15);
+    padding: 25px 32px;
+    min-height: 998px;
+
+    li {
+      background: #fbfbfb;
+      border: 1px solid #ededed;
+      margin-bottom: 20px;
+
+      .pull-left {
+        float: left;
+      }
+
+      .pull-right {
+        float: left;
+        width: 356px;
+        margin-left: 25px;
+
+        .product-name {
+          font-size: 20px;
+          color: #333;
+          margin: 28px 0 8px;
+        }
+
+        .ft12 {
+          font-size: 12px;
+          color: #666;
+          margin-top: 20px;
+        }
+
+        .btn-blue {
+          width: 94px;
+          height: 26px;
+          font-size: 12px;
+          color: $colorFFF;
+          line-height: 26px;
+          text-align: center;
+          @include backgroundImage( '../image/btn-buy-94x26.png', no-repeat, center, center, 100%, 100%);
+          display: inline-block;
+          margin-top: 18px;
+        }
+
+        .btn-orange {
+          width: 94px;
+          height: 26px;
+          font-size: 12px;
+          color: $colorFFF;
+          line-height: 26px;
+          text-align: center;
+          @include backgroundImage( '../image/btn-add-94x26.png', no-repeat, center, center, 100%, 100%);
+          display: inline-block;
+          margin-top: 18px;
+        }
+
+        .btn-box {
+          .btn-blue, .btn-orange {
+            margin-top: 5px;
+          }
+        }
+
+        .price-box {
+          margin-top: 10px;
+
+          .price-really {
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            color: $color666;
+          }
+
+          .price-vip {
+            position: relative;
+            display: inline-block;
+            color: #ff6c47;
+            font-size: 18px;
+            font-weight: bold;
+
+            &:after {
+              content: "";
+              position: absolute;
+              right: -21px;
+              top: 2px;
+              width: 19px;
+              height: 11px;
+              @include backgroundImage( '../image/vip-19x11.png', no-repeat, center, center, 100%, 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+  //公共的标题样式
+  .common-title {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    height: 44px;
+    width: 100%;
+    box-sizing: border-box;
+
+    .bigTitle {
+      margin-left: 30px;
+      border-bottom: 3px solid #ff6c47;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 40px;
+      float: left;
+    }
+
+    .smallTitle {
+      font-size: 14px;
+      color: #999;
+      padding-top: 12px;
+      padding-left: 1px;
+      width: 345px;
+      float: left;
+      margin-left: 18px;
+      text-decoration: underline;
+    }
+
+    .pull-right {
+      font-size: 14px;
+      color: #333;
+      float: right;
+      padding-top: 12px;
+      margin-right: 25px;
+
+      a {
+        font-size: 14px;
+        color: #999;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .content-right {
+    float: right;
+    width: 220px;
+    padding: 0 15px 0 19px;
+    //min-height: 1099px;
+    .common-title {
+      .bigTitle {
+        margin-left: 0;
+      }
+    }
+
+    ul {
+      li {
+        float: left;
+        width: 214px;
+        margin-top: 15px;
+        background-color: #fbfbfb;
+
+        .imgbox {
+          width: 214px;
+          height: 163px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .info-box {
+          border: 1px solid #ededed;
+          border-top: none;
+          padding: 0 10px 11px;
+          overflow: hidden;
+
+          h1 {
+            margin-top: 9px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color333;
+          }
+
+          .price-box {
+            margin-top: 3px;
+
+            p {
+              font-size: 16px;
+              line-height: 20px;
+              font-weight: bolder;
+            }
+
+            .price-really {
+              float: left;
+              color: $color666;
+            }
+
+            .price-vip {
+              position: relative;
+              float: right;
+              color: #ff6c47;
+
+              &:after {
+                content: "";
+                @include position(absolute, 2, -11px, 0, none, none);
+                width: 19px;
+                height: 11px;
+                @include backgroundImage( '../image/vip-19x11.png', no-repeat, center, center, 100%, 100%);
+              }
+            }
+          }
+
+          .desc {
+            margin-top: 4px;
+            height: 32px;
+            font-size: 12px;
+            color: $color666;
+            line-height: 16px;
+          }
+
+          .btn-box {
+            margin-top: 10px;
+
+            .btn-add,
+            .btn-buy {
+              width: 94px;
+              height: 26px;
+              font-size: 12px;
+              color: $colorFFF;
+              line-height: 26px;
+              text-align: center;
+            }
+
+            .btn-buy {
+              float: left;
+              @include backgroundImage( '../image/btn-buy-94x26.png', no-repeat, center, center, 100%, 100%);
+            }
+
+            .btn-add {
+              float: right;
+              @include backgroundImage( '../image/btn-add-94x26.png', no-repeat, center, center, 100%, 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

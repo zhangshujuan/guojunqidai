@@ -1,0 +1,460 @@
+@import "base/common";
+@import "base/header-open-account";
+$_border: 1px solid #dedede;
+$_padWidth: 1000px;
+$_leftWidth: 745px;
+$_padHeight: 1116px;
+$_investImmediatelyHeight: 440px;
+
+._Title {
+  width: 215px;
+  height: 85px;
+  border-bottom: $_border;
+  margin: 0 auto;
+}
+
+.bigTitle {
+  border-bottom: 3px solid #ff6c47;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 41px;
+  line-height: 40px;
+  float: left;
+}
+
+.smallTitle {
+  font-size: 14px;
+  color: #c6c6c6;
+  padding-top: 52px;
+  padding-left: 1px;
+  width: 345px;
+  float: left;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 1570px;
+  background: url("../image/simulate-activity-create-bg.png") no-repeat top;
+  background-size: auto 100%;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1600px) {
+  .mainContainer {
+    background-size: 100%;
+  }
+}
+
+.createBanner {
+  position: absolute;
+  display: block;
+  top: 35px;
+  left: 50%;
+  margin-left: -437px;
+  text-align: center;
+}
+
+.content {
+  margin: 0 auto;
+  height: $_padHeight;
+  width: $_padWidth;
+  background-color: white;
+  background-image: url("../image/container-shadow.png");
+  background-position: $_leftWidth 0;
+  background-repeat: repeat-y;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 385px auto 0;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .main {
+    width: $_leftWidth;
+    height: 100%;
+    float: left;
+
+    .bigTitle {
+      margin-left: 30px;
+    }
+
+    .tab {
+      overflow: hidden;
+      background-color: #f8fcff;
+      border-bottom: 1px solid rgb(215, 233, 251);
+      height: 104px;
+      width: 100%;
+
+      ul {
+        margin-left: 63px;
+        margin-top: 46px;
+        background: url('../image/simulate_activity_tab_hack.png') no-repeat left top;
+        height: 58px;
+
+        li {
+          float: left;
+          width: 127px;
+          display: inline-block;
+          height: 100%;
+          margin-right: 42px;
+          cursor: pointer;
+
+          &.active {
+            border-bottom: 4px solid #45a2fd;
+          }
+
+          &#tab_li_1 {
+            // background: url('../image/plus_72px_1205834_easyicon.net.png') no-repeat left center;
+          }
+
+          &#tab_li_2 {
+            // background: url('../image/hand_cursor_48px_1170268_easyicon.net.png') no-repeat left center;
+          }
+
+          &#tab_li_3 {
+            // background: url('../image/award_ribbon_36.591006423983px_1142271_easyicon.net.png') no-repeat left center;
+            margin-right: 33px;
+          }
+
+          &#tab_li_4 {
+            // background: url('../image/racing_flag_90.555223880597px_1205557_easyicon.net.png') no-repeat left center;
+          }
+        }
+      }
+    }
+
+    .entries {
+      width: 686px;
+      margin: 0 auto;
+      border-top: 1px solid #ddd;
+
+      .alert {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      ul {
+        margin-top: 25px;
+        margin-left: 35px;
+
+        li {
+          display: inline-block;
+          height: 200px;
+          width: 200px;
+          margin-right: 10px;
+          border: 1px solid #ddd;
+          padding-top: 129px;
+          text-align: center;
+
+          a {
+            color: #999;
+          }
+
+          &#entry_1 {
+            background: url('../image/door_key_96px_1205933_easyicon.net.png') no-repeat center 35px;
+          }
+
+          &#entry_2 {
+            background: url('../image/banking_91.085324232082px_1205913_easyicon.net.png') no-repeat center 20px;
+          }
+
+          &#entry_3 {
+            background: url('../image/laptop_computer_113.87854251012px_1205945_easyicon.net.png') no-repeat center 35px;
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    float: right;
+    height: 100%;
+    width: 250px;
+
+    .bigTitle {
+      margin-left: 0;
+      width: 73px;
+    }
+
+    .more-service {
+      height: $_padHeight - $_investImmediatelyHeight;
+
+      > .title {
+        @extend ._Title;
+      }
+
+      .items {
+        width: 215px;
+        height: $_padHeight - $_investImmediatelyHeight - 85;
+        margin: 0 auto;
+        padding-top: 20px;
+
+        .serviceItem {
+          width: 90px;
+          height: 90px;
+          border: $_border;
+          float: left;
+          margin: 8px;
+          background-repeat: no-repeat;
+          background-position: 31px 18px;
+
+          > .hover {
+            width: 88px;
+            height: 3px;
+            position: absolute;
+            display: none;
+          }
+
+          &:hover {
+            > .hover {
+              display: block;
+            }
+          }
+
+          &:nth-child(1) {
+            background-image: url('../image/simulate_open_account_more_search.png');
+
+            > .hover {
+              background-color: #4798f3;
+            }
+          }
+
+          &:nth-child(2) {
+            background-image: url('../image/icon-book-23x24.png');
+
+            > .hover {
+              background-color: #f761af;
+            }
+          }
+
+          &:nth-child(3) {
+            background-image: url('../image/simulate_open_account_more_download_1.png');
+
+            > .hover {
+              background-color: #ff683a;
+            }
+          }
+
+          &:nth-child(4) {
+            background-image: url('../image/simulate_open_account_more_download_2.png');
+
+            > .hover {
+              background-color: #ff5656;
+            }
+          }
+
+          a {
+            display: block;
+            width: 50px;
+            margin: 0 auto;
+            height: 36px;
+            margin-top: 48px;
+            border-top: none;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .investImmediately {
+      @extend .more-service;
+      height: $_investImmediatelyHeight;
+
+      .items {
+        .openAccountItem {
+          height: 100px;
+          width: 200px;
+          border: $_border;
+          margin-bottom: 14px;
+          line-height: 100px;
+          padding-left: 105px;
+
+          a {
+            color: #333;
+            height: inherit;
+          }
+
+          &:nth-child(1) {
+            background: url('../image/qi_huo_kai_hu.png') no-repeat 30px center;
+          }
+
+          &:nth-child(2) {
+            background: url('../image/zheng_quan_kai_hu.png') no-repeat 30px center;
+          }
+
+          &:nth-child(3) {
+            background: url('../image/qi_quan_kai_hu_2.png') no-repeat 30px center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tab_contents {
+  .tab_content {
+    height: 650px;
+    overflow: hidden;
+
+    .infoPad {
+      border: 1px solid rgb(215, 233, 251);
+      background-color: #f8fcff;
+      width: 676px;
+      height: 252px;
+      margin: 36px auto 0;
+
+      .info {
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+        margin: 80px auto 35px;
+        width: 460px;
+      }
+
+      .button {
+        height: 44px;
+        width: 190px;
+        margin: 0 auto;
+
+        cursor: pointer;
+      }
+    }
+
+    &#c_1 {
+      .infoPad {
+        .info {
+          margin-top: 63px;
+        }
+        .button {
+          background-image: url('../image/createNow.png');
+        }
+      }
+    }
+
+    &#c_2 {
+
+      .infoPad {
+        .info {
+          margin-top: 80px;
+        }
+        .button {
+          background-image: url('../image/createNow.png');
+        }
+      }
+
+      > ul {
+        padding: 0 30px;
+        height: 556px;
+
+        li {
+          height: 90px;
+          border-bottom: $_border;
+
+          .left {
+            float: left;
+
+            .itemTitle {
+              margin-top: 24px;
+              font-size: 18px;
+              max-width: 600px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space:nowrap;
+            }
+
+            .itemInfo {
+              margin-top: 2px;
+              max-width: 600px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space:nowrap;
+
+              .info {
+                display: inline;
+                color: #999;
+                font-size: 14px;
+                margin-right: 10px;
+              }
+            }
+          }
+
+          .action {
+            margin-top: 33px;
+            cursor: pointer;
+            float: right;
+            width: 68px;
+            height: 24px;
+            background: url('../image/subscribeNow.png');
+          }
+        }
+      }
+    }
+
+    &#c_3 {
+      > ul {
+        padding: 0 30px;
+        height: 556px;
+
+        li {
+          height: 90px;
+          border-bottom: $_border;
+
+          .left {
+            float: left;
+
+            .itemTitle {
+              margin-top: 24px;
+              font-size: 18px;
+              max-width: 600px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space:nowrap;
+            }
+
+            .itemInfo {
+              margin-top: 2px;
+              max-width: 600px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space:nowrap;
+
+              .info {
+                display: inline;
+                color: #999;
+                font-size: 14px;
+                margin-right: 10px;
+              }
+            }
+          }
+
+          .action {
+            margin-top: 33px;
+            cursor: pointer;
+            float: right;
+            width: 68px;
+            height: 24px;
+            background: url('../image/scanNow.png');
+          }
+        }
+      }
+    }
+
+    &#c_4 {
+      .infoPad {
+        .info {
+          margin-top: 70px;
+        }
+        .button {
+          background-image: url('../image/joinNow.png');
+        }
+      }
+    }
+
+    &.inactive {
+      display: none;
+    }
+  }
+}

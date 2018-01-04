@@ -1,0 +1,502 @@
+@import "base/common";
+@import "base/header-open-account";
+@import "base/open-account-progress";
+$_border: 1px solid rgba(0, 0, 0, 0.1);
+$_inputSepWidth: 480px;
+$_openAccountHelpHeight: 450px;
+$_more_serviceHeight: 350px;
+$_padHeight: 1270px;
+
+._Title {
+  width: 215px;
+  height: 85px;
+  border-bottom: $_border;
+  margin: 0 auto;
+}
+//  在 less 中根据屏幕宽度决定背景图片填充方式？
+//  这里的解决方案应该是什么样的？
+
+.titleContent {
+  height: 200px;
+  background-image: url('../image/simulate_open_account_title.png');
+}
+
+.mainContainer {
+  background: url('../image/simulate_open_account_bg.png') no-repeat top;
+  width: 100%;
+  padding-bottom: 45px;
+}
+@media (min-width: 1600px) {
+  .mainContainer {
+    background-size: 100%;
+  }
+}
+
+.bigTitle {
+  border-bottom: 3px solid #ff6c47;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 41px;
+  line-height: 40px;
+  float: left;
+}
+
+.smallTitle {
+  font-size: 13px;
+  font-weight: bold;
+  color: #c6c6c6;
+  padding-top: 41px;
+  padding-left: 5px;
+  line-height: 40px;
+  width: 345px;
+  float: left;
+}
+
+.mainContainerPad {
+  height: $_padHeight;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  font-family: 'Microsoft YaHei','PingFang SC','Helvetica Neue',Helvetica,Arial,Verdana,'Hiragino Sans GB','Noto Sans CJK SC','Source Han Sans CN',STHeiti,'WenQuanYi Micro Hei',SimSun,sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .bigTitle {
+    width: 93px;
+    margin-left: 30px;
+  }
+
+  .apply {
+    width: 750px;
+    height: 100%;
+    border-right: $_border;
+    float: left;
+
+    > .title {
+      border-bottom: $_border;
+      height: 85px;
+      width: 100%;
+    }
+
+    @include open-account-progress(654px, 4);
+
+    .inputPad {
+      height: 350px;
+      width: 100%;
+      float: left;
+
+      .right-icon {
+        margin-top: 40px;
+      }
+
+      .right-text {
+        font-size: 24px;
+        color: #666;
+        text-align: center;
+        padding-top: 5px;
+      }
+
+      .text-desc {
+        font-size: 13px;
+        color: #808080;
+        text-align: center;
+        padding-top: 25px;
+      }
+
+      .order-address {
+        font-size: 18px;
+        color: #666;
+        text-align: center;
+        padding-top: 25px;
+      }
+
+      .order-tel {
+        text-align: center;
+        color: #ff6c47;
+        font-size: 17px;
+        padding-top: 10px;
+      }
+    }
+
+    .get-address-by-mobile {
+      width: $_inputSepWidth;
+      margin: 0 auto;
+
+      button {
+        height: 44px;
+        color: white;
+        background-image: url('../image/simulate_finish_button.png');
+        width: 190px;
+        margin: 0 auto;
+        cursor: pointer;
+        display: block;
+      }
+    }
+
+    .other-line {
+      margin-top: 60px;
+      padding-top: 45px;
+      margin-left: 10%;
+      border-top: $_border;
+      width: 80%;
+      height: 300px;
+
+      .other-top-desc {
+        font-size: 12px;
+        color: #808080;
+        float: left;
+
+        .other-top-text {
+          margin-left: 230px;
+        }
+
+        .left-area {
+          margin-top: 25px;
+          margin-left: 100px;
+          border: $_border;
+          width: 200px;
+          height: 210px;
+          float: left;
+
+          img {
+            margin-top: 20px;
+          }
+
+          button {
+            height: 44px;
+            color: white;
+            background-image: url('../image/simulate_finish_open_button.png');
+            width: 150px;
+            margin: 0 auto;
+            cursor: pointer;
+            display: block;
+          }
+        }
+
+        .right-area {
+          margin-top: 25px;
+          margin-left: 40px;
+          border: $_border;
+          width: 200px;
+          height: 210px;
+          float: left;
+
+          img {
+            margin-top: 20px;
+          }
+
+          .qrcode-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+          }
+        }
+      }
+    }
+
+    .button-list-text {
+      width: 100%;
+      float: left;
+      padding-top: 90px;
+
+      .line {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 14px;
+        border-bottom: $_border;
+        padding-bottom: 20px;
+        font-weight: bold;
+      }
+    }
+
+    .button-list {
+      margin-left: 50px;
+      padding-top: 35px;
+      float: left;
+
+      .serviceItem {
+        width: 90px;
+        height: 90px;
+        border: $_border;
+        float: left;
+        margin: 8px;
+        background-repeat: no-repeat;
+        background-position: 31px 18px;
+
+        > .hover {
+          width: 88px;
+          height: 3px;
+          position: absolute;
+          display: none;
+        }
+
+        &:hover {
+          > .hover {
+            display: block;
+          }
+        }
+
+        &:nth-child(1) {
+          background-image: url('../image/invest-icon-3.png');
+
+          > .hover {
+            background-color: #4798f3;
+          }
+        }
+
+        &:nth-child(2) {
+          background-image: url('../image/invest-icon-1.png');
+
+          > .hover {
+            background-color: #f761af;
+          }
+        }
+
+        &:nth-child(3) {
+          background-image: url('../image/invest-icon-2.png');
+
+          > .hover {
+            background-color: #ff683a;
+          }
+        }
+
+        &:nth-child(4) {
+          background-image: url('../image/invest-icon-6.png');
+
+          > .hover {
+            background-color: #ff5656;
+          }
+        }
+
+        &:nth-child(5) {
+          background-image: url('../image/invest-icon-4.png');
+
+          > .hover {
+            background-color: #ff5656;
+          }
+        }
+
+        &:nth-child(6) {
+          background-image: url('../image/invest-icon-5.png');
+
+          > .hover {
+            background-color: #ff5656;
+          }
+        }
+
+        a {
+          display: block;
+          width: 50px;
+          margin: 0 auto;
+          height: 36px;
+          margin-top: 48px;
+          border-top: none;
+          font-size: 12px;
+          color: #999;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .right {
+    float: right;
+    height: 100%;
+    width: 250px;
+
+    .bigTitle {
+      margin-left: 0;
+      width: 73px;
+    }
+
+    .big5wordTitle {
+      margin-left: 0;
+      width: 95px;
+      border-bottom: 3px solid #ff6c47;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 40px;
+      float: left;
+    }
+
+    .open-account-help {
+      height: $_openAccountHelpHeight;
+      border-bottom: $_border;
+
+      > .title {
+        @extend ._Title;
+      }
+
+      ul {
+        padding-top: 15px;
+        margin-left: 20px;
+
+        li {
+          height: 29px;
+          font-size: 12px;
+
+          a {
+            color: #666666;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .moreQuestion {
+        width: 100%;
+
+        a {
+          display: block;
+          width: 100%;
+          text-align: center;
+          margin-top: 25px;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+    }
+
+    .more-service {
+      height: $_more_serviceHeight;
+
+      > .title {
+        @extend ._Title;
+      }
+
+      .items {
+        width: 215px;
+        height: $_more_serviceHeight - 85;
+        margin: 0 auto;
+        padding-top: 20px;
+
+        .serviceItem {
+          width: 90px;
+          height: 90px;
+          border: $_border;
+          float: left;
+          margin: 8px;
+          background-repeat: no-repeat;
+          background-position: 31px 18px;
+
+          > .hover {
+            width: 88px;
+            height: 3px;
+            position: absolute;
+            display: none;
+          }
+
+          &:hover {
+            > .hover {
+              display: block;
+            }
+          }
+
+          &:nth-child(1) {
+            background-image: url('../image/simulate_open_account_more_search.png');
+
+            > .hover {
+              background-color: #4798f3;
+            }
+          }
+
+          &:nth-child(2) {
+            background-image: url('../image/icon-book-23x24.png');
+
+            > .hover {
+              background-color: #f761af;
+            }
+          }
+
+          &:nth-child(3) {
+            background-image: url('../image/simulate_open_account_more_download_1.png');
+
+            > .hover {
+              background-color: #ff683a;
+            }
+          }
+
+          &:nth-child(4) {
+            background-image: url('../image/simulate_open_account_more_download_2.png');
+
+            > .hover {
+              background-color: #ff5656;
+            }
+          }
+
+          a {
+            display: block;
+            width: 50px;
+            margin: 0 auto;
+            height: 36px;
+            margin-top: 48px;
+            border-top: none;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .invest-cats {
+      height: $_padHeight - $_openAccountHelpHeight - $_more_serviceHeight;
+
+      .title {
+        border-bottom: $_border;
+        height: 44px;
+        width: 215px;
+        margin: 0 auto;
+      }
+
+      .list {
+        width: 215px;
+        padding-top: 25px;
+        margin: 0 auto;
+
+        ul {
+          li {
+            margin-bottom: 5px;
+
+            p {
+              float: left;
+              padding-left: 18px;
+              line-height: 20px;
+              font-size: 12px;
+              color: $color666;
+
+              &.list-1 {
+                @include backgroundImage( '../image/trade-list-icon-1.png', no-repeat, left, center, 12px, 12px);
+              }
+
+              &.list-2 {
+                @include backgroundImage( '../image/trade-list-icon-2.png', no-repeat, left, center, 12px, 12px);
+              }
+
+              &.list-3 {
+                @include backgroundImage( '../image/trade-list-icon-3.png', no-repeat, left, center, 12px, 12px);
+              }
+
+              &.list-4 {
+                @include backgroundImage( '../image/trade-list-icon-4.png', no-repeat, left, center, 12px, 12px);
+              }
+            }
+
+            dl {
+              margin-left: 20px;
+
+              dt {
+                float: left;
+                margin-right: 2px;
+                line-height: 20px;
+                font-size: 12px;
+                color: $color999;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

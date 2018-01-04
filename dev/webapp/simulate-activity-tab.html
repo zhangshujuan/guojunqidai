@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>仿真活动</title>
+  <link rel="stylesheet" href="../static/script/plugins/pagination_new/pagination.css">
+  <link rel="stylesheet" href="../static/style/simulate-activity-tab.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="../static/script/original/html5shiv/html5shiv-min.js"></script>
+    <script src="../static/script/original/respondjs/respond-min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <header class="header-open-account">
+    <div class="topbar">
+      <div class="container clearfix">
+        <div class="bar-left">
+          <a href="javascript:void(0);" class="btn-mall">金融商城</a>
+          <a href="javascript:void(0);" class="btn-download">软件下载</a>
+        </div>
+
+        <div class="bar-right">
+          <div class="user clearfix">
+            <p>上午好，王XX</p>
+            <a href="javascript:void(0);" class="logout">退出</a>
+          </div>
+          <a href="javascript:void(0);" class="weibo"></a>
+          <a href="javascript:void(0);" class="shenmegui"></a>
+          <a href="javascript:void(0);" class="wechat">
+            <div class=""></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <div class="container clearfix">
+        <a href="javascript:void(0);" class="logo"></a>
+
+        <nav class="nav">
+          <ul class="clearfix">
+            <li><a href="javascript:void(0);">首页</a></li>
+            <li class="active"><a href="javascript:void(0);">开户</a></li>
+            <li><a href="javascript:void(0);">理财</a></li>
+            <li><a href="javascript:void(0);">商城</a></li>
+            <li><a href="javascript:void(0);">培训</a></li>
+            <li><a href="javascript:void(0);">技术服务</a></li>
+          </ul>
+        </nav>
+
+        <div class="tel"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mainContainer container">
+    <img src="../static/image/simulate-activity-common-banner.png" class="createBanner" />
+    <div class="content">
+      <div class="main">
+        <div class="tab">
+          <ul>
+            <li id="tab_li_1" class="active"></li>
+            <li id="tab_li_2"></li>
+            <li id="tab_li_3"></li>
+            <li id="tab_li_4"></li>
+          </ul>
+        </div>
+        <div class="tab_contents">
+          <!-- 创建比赛 -->
+          <div class="tab_content" id="c_1">
+
+            <div class="infoPad">
+              <div class="info">
+                国泰君安期货为您提供业内领先的期货模拟仿真比赛交易平台，在平台中，您可以设置比赛名称、比赛起止时间、比赛规则等详细内容，创建比赛完成后，您可邀请投资者参加比赛。
+              </div>
+              <div class="button">
+
+              </div>
+            </div>
+
+          </div>
+          <!-- 比赛报名 -->
+          <div class="tab_content inactive" id="c_2">
+
+            <!-- TODO: 需服务端自行控制显隐 -->
+
+            <div class="infoPad">
+              <div class="info">
+                目前暂无比赛，如您需创建比赛，请点击
+              </div>
+              <div class="button">
+
+              </div>
+            </div>
+
+            <ul style="display:none">
+              <li>
+                <div class="left">
+                  <div class="itemTitle">
+                    天津营业部乐在“期”中期货讲堂2016年12月11日课程安排
+                  </div>
+                  <div class="itemInfo">
+                    <div class="info">
+                      开始时间：2016-11-12
+                    </div>
+                    <div class="info">
+                      结束时间：2016-11-13
+                    </div>
+                  </div>
+                </div>
+                <div class="action"></div>
+              </li>
+              <li>
+                <div class="left">
+                  <div class="itemTitle">
+                    天津营业部乐在“期”中期货讲堂2016年12月11日课程安排
+                  </div>
+                  <div class="itemInfo">
+                    <div class="info">
+                      开始时间：2016-11-12
+                    </div>
+                    <div class="info">
+                      结束时间：2016-11-13
+                    </div>
+                  </div>
+                </div>
+                <div class="action"></div>
+              </li>
+            </ul>
+            <div class="page pagination" id="pagination_1" style="display:none"></div>
+          </div>
+          <!-- 查看排名 -->
+          <div class="tab_content inactive" id="c_3">
+            <ul>
+              <li>
+                <div class="left">
+                  <div class="itemTitle">
+                    短标题
+                  </div>
+                  <div class="itemInfo">
+                    <div class="info">
+                      开始时间：2016-11-12
+                    </div>
+                    <div class="info">
+                      结束时间：2016-11-13
+                    </div>
+                  </div>
+                </div>
+                <div class="action">
+
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <div class="itemTitle">
+                    长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题长标题
+                  </div>
+                  <div class="itemInfo">
+                    <div class="info">
+                      开始时间：2016-11-12
+                    </div>
+                    <div class="info">
+                      结束时间：2016-11-13
+                    </div>
+                  </div>
+                </div>
+                <div class="action">
+
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <div class="itemTitle">
+                    天津营业部乐在“期”中期货讲堂2016年12月11日课程安排
+                  </div>
+                  <div class="itemInfo">
+                    <div class="info">
+                      开始时间：2016-11-12
+                    </div>
+                    <div class="info">
+                      结束时间：2016-11-13
+                    </div>
+                    <div class="info">
+                      测试：哈哈哈啊哈哈哈哈哈哈哈哈
+                    </div>
+                    <div class="info">
+                      测试：哈哈哈啊哈哈哈哈哈哈哈哈
+                    </div>
+                  </div>
+                </div>
+                <div class="action"></div>
+              </li>
+              <li>
+                <div class="left">
+                  <div class="itemTitle">
+                    天津营业部乐在“期”中期货讲堂2016年12月11日课程安排
+                  </div>
+                  <div class="itemInfo">
+                    <div class="info">
+                      开始时间：2016-11-12
+                    </div>
+                    <div class="info">
+                      结束时间：2016-11-13
+                    </div>
+                  </div>
+                </div>
+                <div class="action"></div>
+              </li>
+              <li>
+                <div class="left">
+                  <div class="itemTitle">
+                    天津营业部乐在“期”中期货讲堂2016年12月11日课程安排
+                  </div>
+                  <div class="itemInfo">
+                    <div class="info">
+                      开始时间：2016-11-12
+                    </div>
+                    <div class="info">
+                      结束时间：2016-11-13
+                    </div>
+                  </div>
+                </div>
+                <div class="action"></div>
+              </li>
+              <li>
+                <div class="left">
+                  <div class="itemTitle">
+                    天津营业部乐在“期”中期货讲堂2016年12月11日课程安排
+                  </div>
+                  <div class="itemInfo">
+                    <div class="info">
+                      开始时间：2016-11-12
+                    </div>
+                    <div class="info">
+                      结束时间：2016-11-13
+                    </div>
+                  </div>
+                </div>
+                <div class="action"></div>
+              </li>
+            </ul>
+            <div class="page pagination" id="pagination_2"></div>
+          </div>
+          <!-- 知识问答 -->
+          <div class="tab_content inactive" id="c_4">
+            <div class="infoPad">
+              <div class="info">
+                为您提供参加期货知识竞赛的平台，您可以通过平台进行答题，进一步熟悉期货投资相关知识。
+              </div>
+              <div class="button">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entries">
+          <div class="alert">
+            若您还未开通期货仿真模拟账号，可以通过以下入口进行开通。
+          </div>
+          <ul>
+            <li id="entry_1"><a href="javascript:void(0);">商品期货<br/>模拟账号开通</a></li>
+            <li id="entry_2"><a href="javascript:void(0);">金融期货<br/>仿真账号开通</a></li>
+            <li id="entry_3"><a href="javascript:void(0);">模拟仿真<br/>软件下载</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+
+        <div class="investImmediately">
+
+          <div class="title">
+            <div class="bigTitle">
+              立即投资
+            </div>
+          </div>
+
+          <div class="items">
+            <div class="openAccountItem">
+              <a href="">期货开户</a>
+            </div>
+            <div class="openAccountItem">
+              <a href="">证券开户</a>
+            </div>
+            <div class="openAccountItem">
+              <a href="">期权开户</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-service">
+
+          <div class="title">
+            <div class="bigTitle">
+              更多服务
+            </div>
+          </div>
+
+          <div class="items">
+
+            <div class="serviceItem">
+              <div class="hover"></div>
+              <a href="">营业网点查询</a>
+            </div>
+            <div class="serviceItem">
+              <div class="hover"></div>
+              <a href="">期货知识介绍</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="clearfix box-1">
+        <a href="javascript:void(0);" class="btn-web">国泰君安期货官网</a>
+        <a href="javascript:void(0);" class="btn-help">帮助中心</a>
+        <p class="tel">联系我们：</p>
+      </div>
+      <div class="clearfix box-2">
+        <p class="copy">版权所有&copy; 2014 国泰君安期货有限公司&nbsp;&nbsp;沪ICP备06059277号</p>
+        <p class="industry">上海工商</p>
+        <p class="licence">营业执照</p>
+      </div>
+
+      <div class="wechat wechat-1">微信订阅号</div>
+      <div class="wechat wechat-2">微信服务号</div>
+    </div>
+  </footer>
+
+  <script src="../static/script/plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript">
+    // binding tab actions
+
+    var tab = $('.tab').find('ul')
+    var tab1 = tab.find('#tab_li_1')
+    var tab2 = tab.find('#tab_li_2')
+    var tab3 = tab.find('#tab_li_3')
+    var tab4 = tab.find('#tab_li_4')
+    var contents = $('.tab_contents')
+    var content1 = contents.find('#c_1')
+    var content2 = contents.find('#c_2')
+    var content3 = contents.find('#c_3')
+    var content4 = contents.find('#c_4')
+    tab1.click(function(event) {
+      tab1.addClass('active')
+      tab1.siblings().removeClass('active')
+      content1.removeClass('inactive')
+      content1.siblings().addClass('inactive')
+    })
+    tab2.click(function(event) {
+      tab2.addClass('active')
+      tab2.siblings().removeClass('active')
+      content2.removeClass('inactive')
+      content2.siblings().addClass('inactive')
+    })
+    tab3.click(function(event) {
+      tab3.addClass('active')
+      tab3.siblings().removeClass('active')
+      content3.removeClass('inactive')
+      content3.siblings().addClass('inactive')
+    })
+    tab4.click(function(event) {
+      tab4.addClass('active')
+      tab4.siblings().removeClass('active')
+      content4.removeClass('inactive')
+      content4.siblings().addClass('inactive')
+    })
+
+    //  比赛报名
+
+    var createBtn = content2.find('.button')
+    createBtn.click(function(event) {
+      /* Act on the event */
+      content2.find('ul').css('display', 'block')
+      content2.find('.pagination').css('display', 'block')
+      content2.find('.infoPad').css('display', 'none')
+    })
+
+    //  TODO: This is test script
+    tab3.click()
+  </script>
+
+  <script src="../static/script/plugins/pagination_new/pagination.min.js"></script>
+  <script type="text/javascript">
+    // pagination init method
+    function initPagination(options) {
+      $(options.id).pagination({
+        dataSource: function(done) {
+          var result = [];
+          for (var i = 1; i < options.itemCount + 1; i++) {
+            result.push(i);
+          }
+          done(result);
+        },
+        showGoInput: true,
+        showGoButton: true,
+        goButtonText: "前往",
+        pageSize: options.pageSize,
+        callback: options.callback
+      })
+    }
+
+    initPagination({
+      id: '#pagination_1',
+      itemCount: 10,
+      pageSize: 6,
+      callback: function(data, pagination) {
+        // TODO: 请在这里添加 ajax 请求并刷新页面
+        console.log("✅" + pagination.pageNumber);
+      }
+    })
+
+    initPagination({
+      id: '#pagination_2',
+      itemCount: 20,
+      pageSize: 6,
+      callback: function(data, pagination) {
+        // TODO: 请在这里添加 ajax 请求并刷新页面
+        console.log("✅" + pagination.pageNumber);
+      }
+    })
+  </script>
+
+</body>
+
+</html>

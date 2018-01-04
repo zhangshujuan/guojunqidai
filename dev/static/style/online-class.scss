@@ -1,0 +1,202 @@
+@import "base/common";
+@import "base/header-open-account";
+@import "base/open-account-progress";
+$_border: 1px solid rgba(0, 0, 0, 0.1);
+$_inputSepWidth: 480px;
+$_openAccountHelpHeight: 450px;
+$_subscribeOpenAccountDetailHeight: 275px;
+$_padHeight: 700px;
+$_insertShadow: 0 1px 3px #DDD inset;
+
+._Title {
+  width: 215px;
+  height: 85px;
+  border-bottom: $_border;
+  margin: 0 auto;
+  color: #333;
+}
+//  在 less 中根据屏幕宽度决定背景图片填充方式？
+//  这里的解决方案应该是什么样的？
+
+.titleContent {
+  height: 200px;
+  background: url('../image/train_signup.png') no-repeat 120px 70px;
+}
+
+.mainContainer {
+  background: url('../image/notebook-933362_1920.png') no-repeat top;
+  width: 100%;
+  padding-bottom: 45px;
+}
+@media (min-width: 1600px) {
+  .mainContainer {
+    background-size: 100%;
+  }
+}
+
+.bigTitle {
+  border-bottom: 3px solid #ff6c47;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 41px;
+  line-height: 40px;
+  float: left;
+}
+
+.smallTitle {
+  font-size: 14px;
+  color: #c6c6c6;
+  padding-top: 52px;
+  padding-left: 1px;
+  width: 345px;
+  float: left;
+}
+
+.mainContainerPad {
+  min-height: $_padHeight;
+  overflow: hidden;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  font-family: 'Microsoft YaHei','PingFang SC','Helvetica Neue',Helvetica,Arial,Verdana,'Hiragino Sans GB','Noto Sans CJK SC','Source Han Sans CN',STHeiti,'WenQuanYi Micro Hei',SimSun,sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .bigTitle {
+    margin-left: 30px;
+  }
+
+  .smallTitle {
+    margin-left: 12px;
+  }
+
+  .apply {
+    width: 750px;
+    float: left;
+    box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.15);
+
+    > .title {
+      border-bottom: $_border;
+      height: 85px;
+      width: 100%;
+    }
+    @include open-account-progress(654px, 4);
+
+    .subscribeDate {
+      width: 350px;
+      height: 24px;
+      margin: 16px auto 0;
+      background-color: #f3f3f3;
+      border-radius: 3px;
+      color: #ababab;
+      font-size: 12px;
+      padding: 3px 25px;
+      -moz-box-shadow: $_insertShadow;
+      -webkit-box-shadow: $_insertShadow;
+      box-shadow: $_insertShadow;
+    }
+
+    .type {
+      height: 100px;
+      width: $_inputSepWidth;
+      margin: 53px auto 0;
+      border-bottom: 1px solid #CCC;
+
+      > .title {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      > .buttons {
+        width: 362px;
+        height: 27px;
+        margin: 23px auto 0;
+
+        input {
+          // width: 116px;
+          height: 100%;
+          padding: 0 9px;
+          border-radius: 3px;
+          display: inline-block;
+          border: 1px solid #CCC;
+          color: #999;
+          font-size: 12px;
+          cursor: pointer;
+        }
+
+        .active {
+          border: 1px solid #ff6c47;
+          color: #ff6c47;
+          background: url('../image/simulate_open_account_button_active.png') no-repeat 100% -1px;
+        }
+      }
+    }
+  }
+
+  .right {
+    float: right;
+    height: 100%;
+    width: 250px;
+
+    .bigTitle {
+      margin-left: 0;
+      width: 73px;
+    }
+
+    .classList {
+      > .title {
+        @extend ._Title;
+      }
+
+      ul {
+        padding-top: 16px;
+        li {
+          height: 31px;
+          padding-left: 20px;
+          margin: 7px 0;
+          a {
+            display: block;
+            float: left;
+            color: #666;
+            line-height: 15px;
+            cursor: pointer;
+          }
+
+          .more {
+            display: inline-block;
+            color: #999;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.article {
+  margin: 60px 50px;
+  color: #333;
+
+  .a_videoItem {
+    margin: 10px auto;
+    .videoTitle {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin: 5px auto;
+    }
+  }
+
+  .a_title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .a_subTitle {
+    font-size: 12px;
+    color: #999;
+    margin: 15px 0 40px 0;
+    text-align: center;
+  }
+}

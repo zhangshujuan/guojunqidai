@@ -1,0 +1,129 @@
+@import "base/common";
+@import "base/header-open-account";
+
+.mainContainer{
+   width:100%;
+   height:1100px;
+   background: url("../image/simulate-activity-create-bg.png") no-repeat top;
+   position: relative;
+   overflow: hidden;
+ }
+
+@media (min-width: 1600px) {
+  .mainContainer {
+    background-size: 100%;
+  }
+}
+
+.createBanner{
+  position: absolute;
+  display: block;
+  top:35px;
+  left:50%;
+  margin-left: -437px;
+  text-align: center;
+}
+
+.signUp{
+  width:710px;
+  height:660px;
+  background-color: #fff;
+  position: relative;
+  margin:385px auto 0;
+}
+
+.bannerLogo{
+  position: absolute;
+  top: -46px;
+  left: 52px;
+}
+
+.activityDesc{
+  position: absolute;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+  top:-40px;
+  left: 110px;
+  width:480px;
+  height:80px;
+  text-align: center;
+  padding : 10px;
+  display: table;
+  span{
+    vertical-align:middle;
+    display:table-cell;
+  }
+}
+
+.timeClock{
+  padding-top: 120px;
+}
+
+.signUp{
+  .competitionTime{
+    margin-top: 16px;
+    text-align: center;
+    font-size: 15px;
+    line-height:26px;
+    font-weight: 500;
+    margin-bottom: 41px;
+  }
+}
+
+.competitionRule{
+  margin-bottom: 19px;
+  .head{
+    margin:0 auto 21px;
+    text-align: center;
+    font-size: 18px;
+    line-height:38px;
+    width:72px;
+    border-bottom:3px solid #ff6c47;
+    color: #333333;
+    font-weight: 600;
+  }
+  p:not(.head){
+    color:#666666;
+    font-size: 12px;
+    line-height:24px;
+    margin-left:60px;
+    margin-right: 60px;
+  }
+  p.informations{
+    color:#666666;
+    font-size: 12px;
+    line-height:24px !important;
+    margin-left:60px;
+    margin-right: 60px;
+  }
+}
+
+//.joinNow{
+//  margin:0 auto;
+//  width:190px;
+//  height:44px;
+//  border-radius: 5px;
+//  background: -webkit-gradient(linear,0% 0%, 0% 100%,from(#71b3fd),to(#4697f3));
+//  text-align: center;
+//  line-height:44px;
+//  text-shadow: 0 1px 1px #f3f3f3;
+//  a{
+//    color: #fff;
+//  }
+//}
+
+.share{
+  margin-top: 23px;
+  text-align: center;
+  span{
+    line-height: 26px;
+    color: #333333;
+    margin-right: 6px;
+  }
+  a img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 9px;
+  }
+}

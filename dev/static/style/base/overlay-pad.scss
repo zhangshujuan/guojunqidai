@@ -1,0 +1,36 @@
+@mixin overlay-pad($pad-width) {
+  .overlay {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.15);
+    z-index: 1002;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    * {
+      box-sizing: border-box;
+    }
+
+    a {
+      color: rgb(255, 108, 71);
+      text-decoration: underline;
+    }
+
+    .pad {
+      width: $pad-width;
+      margin: 0 auto;
+      height: 100px;
+      background-color: white;
+      opacity: 1.0;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+
+      .topbar {
+        width: 140px;
+        margin: 0 auto;
+        height: 3px;
+        background-color: rgb(69, 162, 235);
+      }
+    }
+  }
+}

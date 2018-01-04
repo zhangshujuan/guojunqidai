@@ -1,0 +1,190 @@
+@import "base/common";
+@import "base/header-open-account";
+
+.mainContainer {
+  width: 100%;
+  height: 1100px;
+  background: url("../image/simulate-activity-create-bg.png") no-repeat top;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1600px) {
+  .mainContainer {
+    background-size: 100%;
+  }
+}
+
+.createBanner {
+  position: absolute;
+  display: block;
+  top: 35px;
+  left: 50%;
+  margin-left: -437px;
+  text-align: center;
+}
+
+.activityTitle {
+  width: 70px;
+  border-bottom: 3px solid #ff6c47;
+  margin: 0 auto 35px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.signUp {
+  width: 710px;
+  height: 542px;
+  background-color: #fff;
+  position: relative;
+  margin: 385px auto 0;
+  padding-top: 118px;
+}
+
+.activityDesc{
+  position: absolute;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+  top:-40px;
+  left: 110px;
+  width:480px;
+  height:80px;
+  text-align: center;
+  padding : 10px;
+  display: table;
+  span{
+    vertical-align:middle;
+    display:table-cell;
+  }
+}
+
+.bannerLogo {
+  position: absolute;
+  top: -46px;
+  left: 60px;
+}
+
+.inputItem {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 13px;
+
+  .title {
+    width: 230px;
+    height: 100%;
+    text-align: right;
+    display: inline-block;
+    line-height: 40px;
+    font-weight: bold;
+  }
+
+  input {
+    height: 100%;
+    width: 270px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    padding-left: 8px;
+  }
+
+  .info {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+  .inputWarn {
+    color: red;
+  }
+
+  #addressInput {
+    width: 300px;
+  }
+
+  #verifyCodeInput {
+    width: 160px;
+  }
+
+  &#verifyCode {
+    .title {
+      float: left;
+    }
+
+    .info {
+      float: left;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    input {
+      float: left;
+      margin-left: 6px;
+    }
+
+    button {
+      margin-left: 12px;
+      width: 95px;
+      height: 24px;
+      margin-top: 8px;
+      border-radius: 3px;
+      float: left;
+    }
+
+    .active {
+      background: url('../image/simulate_open_account_get_verify_code.png') no-repeat center;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0);
+    }
+
+    .sent {
+      background-color: #CCC;
+      color: white;
+      font-size: 12px;
+    }
+  }
+}
+
+#signupNow {
+  display: block;
+  margin: 35px auto 0;
+  width: 190px;
+  height: 44px;
+  background-image: url("../image/activity-signupNow.png");
+  cursor: pointer;
+}
+
+.addition {
+  width: 400px;
+  height: 24px;
+  line-height: 24px;
+  margin: 16px auto 0;
+  background-color: #f3f3f3;
+  border-radius: 3px;
+  color: #ababab;
+  font-size: 13px;
+  padding: 0px 25px;
+  -moz-box-shadow: 0 1px 3px #DDD inset;
+  -webkit-box-shadow: 0 1px 3px #DDD inset;
+  box-shadow: 0 1px 3px #DDD inset;
+  text-align: center;
+
+  a {
+    color: #4b9bf4;
+  }
+}
+
+.share {
+  margin-top: 23px;
+  text-align: center;
+
+  span {
+    line-height: 26px;
+    color: #333333;
+    margin-right: 6px;
+  }
+
+  a img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 9px;
+  }
+}

@@ -1,0 +1,193 @@
+@import "reset";
+@import "mixin-background";
+@import "mixin-position";
+@import "mixin-gradient";
+@import "_mixin-transform";
+
+// =====================================================
+// header-open-account
+// =====================================================
+
+.header-open-account {
+  .topbar {
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #e4e3e4;
+    -webkit-box-shadow: 0 0 2px #f5f5f5;
+    -moz-box-shadow: 0 0 2px #f5f5f5;
+    box-shadow: 0 0 2px #f5f5f5;
+
+    .container {
+      height: 35px;
+    }
+
+    .bar-left {
+      float: left;
+
+      .btn-download,
+      .btn-mall {
+        float: left;
+        height: 28px;
+        padding-left: 28px;
+        padding-right: 5px;
+        background-color: $colorFFF;
+        border: 1px solid #d9d9d9;
+        border-top: none;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        font-size: 12px;
+        line-height: 28px;
+        color: #888888;
+        -webkit-box-shadow: 0 0 3px #eaeaea;
+        -moz-box-shadow: 0 0 3px #eaeaea;
+        box-shadow: 0 0 3px #eaeaea;
+      }
+
+      .btn-mall {
+        @include backgroundImage( '../image/header-open-account-topbar-1-16x16.png', no-repeat, 6px, 5px, 16px, 16px);
+      }
+
+      .btn-download {
+        margin-left: 6px;
+        @include backgroundImage( '../image/header-open-account-topbar-2-15x15.png', no-repeat, 7px, 5px, 15px, 15px);
+      }
+    }
+
+    .bar-right {
+      float: right;
+      // overflow: hidden;
+      .user {
+        float: left;
+
+        p {
+          float: left;
+          padding-left: 25px;
+          font-size: 12px;
+          line-height: 35px;
+          color: $color666;
+          @include backgroundImage( '../image/header-open-account-topbar-3-20x20.png', no-repeat, left, center, 20px, 20px);
+        }
+
+        .logout {
+          float: left;
+          margin-left: 11px;
+          font-size: 12px;
+          line-height: 35px;
+          color: $color666;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .weibo {
+        float: left;
+        width: 20px;
+        height: 18px;
+        margin: 8px 0 0 14px;
+        @include backgroundImage( '../image/header-open-account-topbar-4-20x18.png', no-repeat, center, center, 100%, 100%);
+      }
+
+      .shenmegui {
+        float: left;
+        width: 23px;
+        height: 22px;
+        margin: 8px 0 0 10px;
+        @include backgroundImage( '../image/header-open-account-topbar-5-23x22.png', no-repeat, center, center, 100%, 100%);
+      }
+
+      .wechat {
+        float: left;
+        width: 20px;
+        height: 19px;
+        margin: 8px 0 0 7px;
+        @include backgroundImage( '../image/header-open-account-topbar-6-20x19.png', no-repeat, center, center, 100%, 100%);
+        position: relative;
+
+        div {
+          position: absolute;
+          top: 45px;
+          left: -80px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          @include backgroundImage( '../image/open-phone-qrCode.png', no-repeat, center, center, 100%, 100%);
+          opacity: 0;
+          @include translate(0,0,0);
+          -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s ease;
+          -moz-transition: opacity 0.2s ease,-moz-transform 0.2s ease;
+          -ms-transition: opacity 0.2s ease,-ms-transform 0.2s ease;
+          transition: opacity 0.2s ease,transform 0.2s ease;
+        }
+
+        &:hover {
+          div {
+            opacity: 1;
+            z-index: 1000;
+            @include translate(0,-15px,0);
+            -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s ease;
+            -moz-transition: opacity 0.2s ease,-moz-transform 0.2s ease;
+            -ms-transition: opacity 0.2s ease,-ms-transform 0.2s ease;
+            transition: opacity 0.2s ease,transform 0.2s ease;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar {
+    background-color: $colorFFF;
+
+    .container {
+      height: 74px;
+      overflow: hidden;
+    }
+
+    .logo {
+      float: left;
+      width: 273px;
+      height: 31px;
+      margin: 22px 0 0;
+      @include backgroundImage( '../image/header-open-account-navbar-logo-273x31.png', no-repeat, center, center, 100%, 100%);
+    }
+
+    .nav {
+      float: left;
+      margin: 22px 0 0 47px;
+
+      ul {
+        li {
+          float: left;
+          margin-right: 10px;
+          border-radius: 5px;
+
+          a {
+            display: block;
+            height: 31px;
+            padding: 0 17px;
+            font-size: 14px;
+            line-height: 31px;
+            text-align: center;
+            color: $color999;
+          }
+
+          &.active {
+            @include gradient(top, #77b7ff, #4094f1);
+
+            a {
+              color: $colorFFF;
+            }
+          }
+        }
+      }
+    }
+
+    .tel {
+      float: right;
+      width: 146px;
+      height: 16px;
+      margin: 29px 0 0;
+      @include backgroundImage( '../image/header-open-account-navbar-tel-146x16.png', no-repeat, center, center, 100%, 100%);
+    }
+  }
+}

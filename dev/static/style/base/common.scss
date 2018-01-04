@@ -1,0 +1,116 @@
+@import "reset";
+@import "mixin-background";
+@import "mixin-position";
+@import "mixin-gradient";
+
+
+
+
+
+// =====================================================
+// footer
+// =====================================================
+.footer{
+	background-color: $color666;
+
+	.container{
+		height: 122px;
+		overflow: hidden;
+	}
+
+	.box-1{
+		overflow: hidden;
+
+		.btn-web, .btn-help{
+			float: left;
+			height: 23px;
+			padding: 0 9px 0 28px;
+			background-color: #858585;
+			border-radius: 2px;
+			font-size: 12px;
+			color: $colorFFF;
+			line-height: 23px;
+		}
+
+		.btn-web{
+			margin: 28px 0 0 21px;
+			@include backgroundImage('../image/footer-icon-1-16x14.png', no-repeat, 7px, 4px, 16px, 14px);
+		}
+
+		.btn-help{
+			margin: 28px 0 0 3px;
+			@include backgroundImage('../image/footer-icon-2-14x14.png', no-repeat, 7px, 4px, 14px, 14px);
+		}
+
+		.tel{
+			position: relative;
+			float: left;
+			margin: 24px 0 0 172px;
+			padding: 4px 79px 0 30px;
+			font-size: 12px;
+			color: $colorFFF;
+			line-height: 24px;
+
+			&:before, &:after{
+				content: "";
+				@include position(absolute, 2, none, none, none, none);
+			}
+
+			&:before{
+				width: 24px;
+				height: 24px;
+				top: 0;
+				left: 0;
+				@include backgroundImage('../image/footer-icon-3-24x24.png', no-repeat, center, center, 100%, 100%);
+			}
+			&:after{
+				width: 75px;
+				height: 16px;
+				top: 6px;
+				right: 0;
+				@include backgroundImage('../image/footer-tel-75x16.png', no-repeat, center, center, 100%, 100%);
+			}
+		}
+	}
+
+	.box-2{
+		margin-top: 34px;
+		overflow: hidden;
+		text-align: center;
+		font-size: 0;
+
+		.copy, .industry, .licence{
+			display: inline-block;
+			font-size: 12px;
+			color: #b9b9b9;
+			line-height: 24px;
+		}
+
+		.industry, .licence{
+			margin-left: 19px;
+			padding: 3px 0 0 29px;
+			@include backgroundImage('../image/footer-icon-5-25x26.png', no-repeat, left, top, 25px, 26px);
+		}
+	}
+
+
+	.wechat{
+		@include position(absolute, 2, 16px, 0, none, none);
+		width: 70px;
+		height: 32px;
+		padding: 70px 0 0 0;
+		line-height: 32px;
+		font-size: 12px;
+		color: $colorFFF;
+		text-align: center;
+
+		&.wechat-1{
+			right: 84px;
+			@include backgroundImage('../image/code-img-01-415x414.png', no-repeat, center, top, 70px, 70px);
+		}
+
+		&.wechat-2{
+			@include backgroundImage('../image/code-img-02-415x415.png', no-repeat, center, top, 70px, 70px);
+		}
+	}
+}

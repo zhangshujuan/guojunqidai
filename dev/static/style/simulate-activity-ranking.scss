@@ -1,0 +1,111 @@
+@import "base/common";
+@import "base/header-open-account";
+
+.mainContainer{
+  width:100%;
+  height:1100px;
+  background: url("../image/simulate-activity-create-bg.png") no-repeat top;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 1600px) {
+  .mainContainer {
+    background-size: 100%;
+  }
+}
+
+.createBanner{
+  position: absolute;
+  display: block;
+  top:35px;
+  left:50%;
+  margin-left: -437px;
+  text-align: center;
+}
+
+.signUp{
+  width:710px;
+  height:542px;
+  background-color: #fff;
+  position: relative;
+  margin:385px auto 0;
+  padding-top: 118px;
+}
+
+.bannerLogo{
+  position: absolute;
+  top: -46px;
+  left: 60px;
+}
+
+.activityDesc{
+  position: absolute;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+  top:-40px;
+  left: 110px;
+  width:480px;
+  height:80px;
+  text-align: center;
+  padding : 10px;
+  display: table;
+  span{
+    vertical-align:middle;
+    display:table-cell;
+  }
+}
+
+.activityRanking{
+  margin:0 auto;
+  width:116px;
+  height:46px;
+  font-size: 17px;
+  color: #666666;
+  text-align: center;
+  line-height:46px;
+  background-color: #f4f4f4;
+  margin-bottom: 22px;
+}
+
+.signUp table{
+  margin:0 auto;
+  border:8px solid #ffb03f;
+  width:405px;
+  height:380px;
+  border-collapse: collapse;
+  tr{
+    height:38px;
+    line-height: 38px;
+    text-indent: 14px;
+    color: #333333;
+    font-weight: 600;
+    &.firstTr{
+      background-color: #ffb03f;
+      color: #ffffff;
+      font-size: 16px;
+    }
+    td{
+      width:200px;
+    }
+  }
+  tr.grey{
+    background-color: #f5f5f5;
+  }
+}
+
+.share{
+  margin-top: 23px;
+  text-align: center;
+  span{
+    line-height: 26px;
+    color: #333333;
+    margin-right: 6px;
+  }
+  a img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 9px;
+  }
+}

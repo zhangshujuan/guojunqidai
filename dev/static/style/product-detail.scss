@@ -1,0 +1,486 @@
+@import "base/common";
+@import "base/header-index";
+@import "base/count-selector";
+@import "base/overlay-pad";
+$_border: 1px solid #dedede;
+$_padWidth: 1000px;
+$_leftWidth: 745px;
+
+.content {
+  margin: 30px auto;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    overflow-x: auto;
+    background-color: white;
+    background-image: url("../image/container-shadow.png");
+    background-position: $_leftWidth 0;
+    background-repeat: repeat-y;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .main {
+    width: $_leftWidth;
+    height: 100%;
+    float: left;
+
+    .productInfo {
+      height: 395px;
+
+      > img {
+        height: 330px;
+        width: 330px;
+        float: left;
+        margin: 33px 0 0 33px;
+      }
+
+      .priceAndBuy {
+        height: 330px;
+        width: 330px;
+        float: left;
+        margin: 33px 0 0 30px;
+
+        #name {
+          height: 70px;
+          margin-top: 10px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        #priceTitle {
+          font-size: 14px;
+        }
+
+        #price {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        #vipPriceTitle {
+          margin-top: 8px;
+          color: #ff6c47;
+          font-size: 14px;
+        }
+
+        #vipPrice {
+          font-size: 22px;
+          font-weight: bold;
+          color: #ff6c47;
+        }
+
+        #countTitle {
+          margin-top: 14px;
+          font-size: 14px;
+        }
+
+        #count {
+          margin-top: 5px;
+          border-radius: 5px;
+          border: 1px solid #CCC;
+          width: 95px;
+        }
+
+        #buy {
+          width: 126px;
+          height: 45px;
+          float: left;
+          background-image: url("../image/product-detail-buy.png");
+          background-repeat: no-repeat;
+          margin-top: 30px;
+        }
+
+        #add {
+          margin-left: 15px;
+          width: 186px;
+          height: 45px;
+          float: left;
+          background-image: url("../image/product-detail-add.png");
+          background-repeat: no-repeat;
+          margin-top: 30px;
+        }
+
+        input {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .productDetail {
+      p {
+        margin: 20px 30px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .right {
+    width: $_padWidth - $_leftWidth;
+    padding: 35px 20px 20px;
+    height: 100%;
+    float: right;
+
+    .common-title {
+      .bigTitle {
+        margin-left: 0;
+      }
+    }
+
+    ul {
+      li {
+        float: left;
+        width: 214px;
+        margin-top: 15px;
+        background-color: #fbfbfb;
+
+        .imgbox {
+          width: 214px;
+          height: 163px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .info-box {
+          border: 1px solid #ededed;
+          border-top: none;
+          padding: 0 10px 11px;
+          overflow: hidden;
+
+          h1 {
+            margin-top: 9px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color333;
+          }
+
+          .price-box {
+            margin-top: 3px;
+
+            p {
+              font-size: 16px;
+              line-height: 20px;
+              font-weight: bolder;
+            }
+
+            .price-really {
+              float: left;
+              color: $color666;
+            }
+
+            .price-vip {
+              position: relative;
+              float: right;
+              color: #ff6c47;
+
+              &:after {
+                content: "";
+                @include position(absolute, 2, -11px, 0, none, none);
+                width: 19px;
+                height: 11px;
+                @include backgroundImage( '../image/vip-19x11.png', no-repeat, center, center, 100%, 100%);
+              }
+            }
+          }
+
+          .desc {
+            margin-top: 4px;
+            height: 32px;
+            font-size: 12px;
+            color: $color666;
+            line-height: 16px;
+          }
+
+          .btn-box {
+            margin-top: 10px;
+
+            .btn-add,
+            .btn-buy {
+              width: 94px;
+              height: 26px;
+              font-size: 12px;
+              color: $colorFFF;
+              line-height: 26px;
+              text-align: center;
+            }
+
+            .btn-buy {
+              float: left;
+              @include backgroundImage( '../image/btn-buy-94x26.png', no-repeat, center, center, 100%, 100%);
+            }
+
+            .btn-add {
+              float: right;
+              @include backgroundImage( '../image/btn-add-94x26.png', no-repeat, center, center, 100%, 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .common-title {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    height: 44px;
+    width: 100%;
+    box-sizing: border-box;
+
+    .bigTitle {
+      width: 72px;
+      margin-left: 30px;
+      border-bottom: 3px solid #ff6c47;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 40px;
+      float: left;
+    }
+
+    .smallTitle {
+      font-size: 14px;
+      color: #999;
+      padding-top: 12px;
+      padding-left: 1px;
+      width: 345px;
+      float: left;
+      margin-left: 18px;
+      text-decoration: underline;
+    }
+
+    .pull-right {
+      font-size: 14px;
+      color: #333;
+      float: right;
+      padding-top: 12px;
+      margin-right: 25px;
+
+      a {
+        font-size: 14px;
+        color: #999;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@include overlay-pad(360px);
+
+.overlay {
+  display: none;
+  .items {
+    .item {
+      height: 40px;
+      width: 268px;
+      margin: 12px auto;
+      border: 1px solid #aaa;
+      border-radius: 2px;
+
+      .icon {
+        float: left;
+        background-color: #f8fcff;
+        border-right: 1px solid #d7e9fb;
+        height: 100%;
+        width: 37px;
+      }
+
+      input[type=text] {
+        height: 100%;
+        width: 266px - 38px;
+        padding-left: 12px;
+      }
+
+      &:nth-child(1) {
+        .icon {
+          background-image: url("../image/binding-icon-account.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      &:nth-child(2) {
+        .icon {
+          background-image: url("../image/binding-icon-password.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      &:nth-child(3) {
+        width: 170px;
+        margin-left: 47px;
+        position: relative;
+
+        .icon {
+          background-image: url("../image/binding-icon-verify-code.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        input {
+          width: 168px - 38px;
+        }
+      }
+
+      img {
+        width: 76px;
+        height: 27px;
+        display: inline;
+        position: absolute;
+        bottom: 6px;
+        right: -90px;
+      }
+    }
+  }
+
+  .additionInfo {
+    height: 56px;
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1) inset;
+
+    p {
+      text-align: center;
+      color: $color666;
+      line-height: 56px;
+    }
+    margin-top: 21px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .successImg {
+    background-repeat: no-repeat;
+    background-image: url('../image/successImg.png');
+    width: 96px;
+    height: 96px;
+  }
+
+  #added {
+    height: 216px;
+
+    .successImg {
+      margin-left: 33px;
+      margin-top: 35px;
+      float: left;
+    }
+
+    .title {
+      width: 230px;
+      float: right;
+      margin-top: 56px;
+      padding-left: 13px;
+    }
+
+    .text {
+      width: 230px;
+      float: right;
+      padding-left: 13px;
+    }
+
+    #continueBuy {
+      width: 108px;
+      margin: 150px auto 0;
+      display: block;
+      height: 32px;
+      border-radius: 6px;
+      background-repeat: no-repeat;
+      background-image: url('../image/alert-added.png');
+    }
+  }
+
+  #loginSuccess {
+    height: 528px;
+
+    .buttons {
+      height: 44px;
+    }
+
+    .successImg {
+      margin: 36px 0 0 70px;
+      float: left;
+    }
+
+    .title {
+      width: 180px;
+      float: right;
+      margin-top: 75px;
+      padding-left: 13px;
+    }
+
+    > p {
+      display: block;
+      width: 100%;
+      height: 108px;
+      padding: 30px;
+      margin-top: 130px;
+      color: $color999;
+      font-size: 13px;
+      span {
+        color: #ff6c47;
+        padding-left: 20px;
+        background-image: url("../image/Warning_16px_1180728_easyicon.net.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+      }
+    }
+
+    .buttons {
+      padding: 0 47px;
+
+      #bindingNow {
+        width: 128px;
+        display: block;
+        height: 44px;
+        border-radius: 6px;
+        background-repeat: no-repeat;
+        background-image: url('../image/alert-binding-binding-now.png');
+        float: left;
+      }
+
+      #bindingLater {
+        width: 128px;
+        display: block;
+        height: 44px;
+        border-radius: 6px;
+        background-repeat: no-repeat;
+        background-image: url('../image/alert-binding-binding-later.png');
+        float: right;
+      }
+    }
+  }
+
+  #login {
+    height: 365px;
+
+    .title {
+      height: 72px;
+      line-height: 72px;
+      width: 100%;
+      text-align: center;
+    }
+
+    #loginBtn {
+      width: 190px;
+      margin: 0 auto;
+      display: block;
+      height: 44px;
+      border-radius: 6px;
+      background-repeat: no-repeat;
+      background-image: url('../image/alert-login-btn.png');
+    }
+  }
+
+  .pad {
+    margin-top: 20px;
+
+    input[type=button] {
+      cursor: pointer;
+    }
+  }
+}

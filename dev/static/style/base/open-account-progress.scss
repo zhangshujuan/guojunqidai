@@ -1,0 +1,28 @@
+@mixin open-account-progress($width, $count) {
+
+  .progress {
+    height: 26px;
+    margin: 18px auto;
+    background-color: #AAA;
+    width: $width;
+
+    .title {
+      height: 100%;
+      color: white;
+      float: left;
+      text-align: right;
+      padding-top: 4px;
+      padding-right: 14px;
+      background-image: url('../image/simulate_open_account_right_arrow.png');
+      background-repeat: no-repeat;
+      font-size: 12px;
+      padding-left: ($width / $count - 86);
+      background-position: ($width / $count - 12);
+      width: $width / $count;
+    }
+
+    .currentProgress {
+      background-color: #ff6c47;
+    }
+  }
+}

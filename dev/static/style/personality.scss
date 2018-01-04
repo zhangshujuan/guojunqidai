@@ -1,0 +1,452 @@
+@import "base/common";
+@import "base/header-open-account";
+
+// =====================================================
+// index-banner
+// =====================================================
+
+.index-banner {
+  .focusPic {
+    position: relative;
+    width: 100%;
+    height: 432px;
+    text-align: center;
+    .hd {
+      height: 15px;
+      overflow: hidden;
+      position: absolute;
+      bottom: 20px;
+      z-index: 1;
+      display: inline-block;
+      display: inline;
+      *display: inline;
+      zoom: 1;
+    }
+    ul {
+      overflow: hidden;
+      zoom: 1;
+      float: left;
+      li {
+        float: left;
+        margin-right: 10px;
+        width: 13px;
+        height: 13px;
+        /*border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        behavior: url(PIE.htc);*/
+        background: url("../image/li-bg-13x13.png");
+        line-height: 14px;
+        text-align: center;
+        //background: #fff;
+        cursor: pointer;
+        &.on {
+          /*background: #ff7c4e;*/
+          background: url("../image/li-on-bg-13x13.png");
+          color: #ff7c4e;
+        }
+      }
+    }
+    .bd {
+      position: relative;
+      height: 100%;
+      z-index: 0;
+      ul {
+        width: 100%;
+        height: 100%;
+      }
+      li {
+        zoom: 1;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+        div {
+          display: block;
+          height: 432px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+// =====================================================
+// marquee
+// =====================================================
+.txtMarquee-left {
+  background-color: $colorFFF;
+  -webkit-box-shadow: 0 0 6px #e9e8e8;
+  -moz-box-shadow: 0 0 6px #e9e8e8;
+  box-shadow: 0 0 6px #e9e8e8;
+  .bd {
+    width: 974px;
+    height: 20px;
+    margin: 0 auto;
+    padding: 8px 0;
+    overflow: hidden;
+    .tempWrap {
+      width: 974px !important;
+    }
+    ul {
+      width: 1020px;
+      height: 20px;
+      white-space: nowrap;
+      font-size: 0;
+      li {
+        display: inline-block;
+        padding: 0 50px 0 25px;
+        margin-right: 12px;
+        border-right: 1px solid #dadada;
+        font-size: 12px;
+        line-height: 20px;
+        color: $color999;
+        @include backgroundImage('../image/marquee-icon-15x15.png', no-repeat, left, 2px, 15px, 15px);
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+//登录弹窗
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.login-modal {
+  @include position(absolute, 50, 65px, 80px, none, none);
+  width: 235px;
+  background-color: $colorFFF;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .modal-top {
+    padding: 16px 22px 14px;
+
+    h1 {
+      font-size: 15px;
+      line-height: 30px;
+      color: $color333;
+      font-weight: bolder;
+      text-align: center;
+    }
+
+    .btn-login, .btn-reg {
+      display: block;
+      margin-top: 12px;
+      width: 190px;
+      height: 44px;
+    }
+
+    .btn-login {
+      @include backgroundImage('../image/btn-login-190x44.png', no-repeat, center, center, 100%, 100%);
+    }
+    .btn-reg {
+      @include backgroundImage('../image/btn-reg-190x44.png', no-repeat, center, center, 100%, 100%);
+    }
+
+    .forget {
+      margin-top: 15px;
+      text-align: right;
+
+      .btn-forget {
+        font-size: 12px;
+        line-height: 24px;
+        color: #aaaaaa;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .modal-bottom {
+    background-color: #f5f5f5;
+    font-size: 12px;
+    color: #666;
+    padding: 24px 20px 24px 20px;
+  }
+}
+//已登录
+.already-login{
+  .text-center{
+    text-align: center;
+  }
+  .modal-top{
+    background: #f5f5f5;
+    .userImg{
+      width: 60px;
+      height: 60px;
+      border: 0;
+      border-radius: 50%;
+      margin: 10px 0px 15px 0px;
+      display: inline-block;
+    }
+    .ft18{
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .ft12{
+      font-size: 12px;
+      color: #666;
+    }
+  }
+  .modal-bottom{
+    background-color: #fff !important;
+    line-height: normal !important;
+    .col-orange{
+      color: #fe6f47;
+      margin: 15px 0 10px 0;
+      font-size: 12px;
+      line-height: normal;
+    }
+    .btn-bind{
+      background: url("../image/btn-bind-190x44.png") no-repeat;
+      width:190px;
+      height: 44px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.content {
+  background: #fff;
+  margin-top: 20px;
+  margin-bottom: 33px;
+  padding: 30px 30px 50px 30px;
+}
+
+.media {
+  border-bottom: 1px solid #ededed;
+  .media-left {
+    vertical-align: top;
+    display: table-cell;
+    background-color: transparent;
+    img {
+      width: 48px;
+      height: 48px;
+      vertical-align: middle;
+      border: 0;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+  }
+  .media-body {
+    vertical-align: top;
+    display: table-cell;
+    width: 874px;
+    .media-heading {
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: 500;
+      span {
+        font-size: 14px;
+        font-weight: normal;
+        color: #999;
+      }
+    }
+    .clearfix {
+      margin: 0 0 10px;
+      .pull-left {
+        float: left;
+        font-size: 14px;
+        color: #999;
+      }
+      .pull-right {
+        float: right;
+        font-size: 12px;
+        color: #4b9bf4;
+      }
+    }
+  }
+}
+
+.product-list {
+  li {
+    margin-top: 15px;
+    img {
+      width: 208px;
+      height: 106px;
+    }
+    .pull-left {
+      float: left;
+    }
+    .row {
+      border-top: 1px solid #ededed;
+      border-bottom: 1px solid #ededed;
+      width: 677px;
+      padding-left: 53px;
+      background: #fbfbfb;
+      .pull-left {
+        line-height: 106px;
+        width: 142px;
+        padding-left: 27px;
+        font-size: 18px;
+        &.on, &:hover, &:focus {
+          color: #ff5a32;
+        }
+      }
+    }
+  }
+}
+
+.icon-key {
+  background: url("../image/icon-key-23x23.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-key-hover-23x23.png") no-repeat center left;
+  }
+}
+
+.icon-rise {
+  background: url("../image/icon-rise-24x24.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-rise-hover-24x24.png") no-repeat center left;
+  }
+}
+
+.icon-time {
+  background: url("../image/icon-time-24x25.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-time-hover-24x25.png") no-repeat center left;
+  }
+}
+
+.icon-arrow {
+  background: url("../image/icon-arrow-20x18.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-arrow-hover-20x18.png") no-repeat center left;
+  }
+}
+
+.icon-buy {
+  background: url("../image/icon-buy-24x24.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-buy-hover-24x24.png") no-repeat center left;
+  }
+}
+
+.icon-offline {
+  background: url("../image/icon-offline-24x20.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-offline-hover-24x20.png") no-repeat center left;
+  }
+}
+
+.icon-ball {
+  background: url("../image/icon-ball-24x24.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-ball-hover-24x24.png") no-repeat center left;
+  }
+}
+
+.icon-appointment {
+  background: url("../image/icon-appointment-24x24.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-appointment-hover-24x24.png") no-repeat center left;
+  }
+}
+
+.icon-tool {
+  background: url("../image/icon-tool-24x21.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-tool-hover-24x21.png") no-repeat center left;
+  }
+}
+
+.icon-hot {
+  background: url("../image/icon-hot-24x24.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-hot-hover-24x24.png") no-repeat center left;
+  }
+}
+
+.icon-order {
+  background: url("../image/icon-order-24x24.png") no-repeat center left;
+  &.on, &:hover, &:focus {
+    background: url("../image/icon-order-hover-24x24.png") no-repeat center left;
+  }
+}
+
+//首页商城的样式
+.slideBox-content{
+  padding: 0px 0 106px 0px;
+  border-top: 1px solid #ddd;
+  margin-top:30px;
+}
+.slideBox {
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 42px;
+  border-top: 1px solid #fff;
+  .sPrev, .sNext {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    display: block;
+    width: 20px;
+    height: 268px;
+    background: url(../image/icon-left-20x26.png) center center no-repeat;
+  }
+  .sNext {
+    left: auto;
+    right: 5px;
+    background: url(../image/icon-right-20x36.png) center center no-repeat;
+  }
+  ul {
+    overflow: hidden;
+    zoom: 1;
+    li {
+      margin: 0 10px;
+      float: left;
+      _display: inline;
+      overflow: hidden;
+      text-align: center;
+      .title a{
+        font-size: 24px;
+        color: #888;
+
+      }
+      .info-list {
+        margin-top: 15px;
+        img {
+          width: 208px;
+          height: 106px;
+          display: block;
+        }
+        .row{
+          background: #fff;
+          padding: 25px 0px 25px 17px;
+          min-height: 54px;
+          .pull-left{
+            width: 50%;
+            float: left;
+            font-size: 12px;
+            color: #666;
+            background-size: 16%;
+            margin-bottom: 10px;
+            &.on, &:hover, &:focus {
+              color: #ff5a32;
+            }
+          }
+        }
+        .long-row{
+          padding-left: 10px;
+          max-width: 198px;
+          .pull-left{
+            &:nth-child(2n){
+              width: 90px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

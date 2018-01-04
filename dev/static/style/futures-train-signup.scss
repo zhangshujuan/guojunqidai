@@ -1,0 +1,311 @@
+@import "base/common";
+@import "base/header-open-account";
+@import "base/open-account-progress";
+$_border: 1px solid rgba(0, 0, 0, 0.1);
+$_inputSepWidth: 480px;
+$_openAccountHelpHeight: 450px;
+$_subscribeOpenAccountDetailHeight: 275px;
+$_padHeight: 700px;
+$_insertShadow: 0 1px 3px #DDD inset;
+
+._Title {
+  width: 215px;
+  height: 85px;
+  border-bottom: $_border;
+  margin: 0 auto;
+  color: #333;
+}
+//  在 less 中根据屏幕宽度决定背景图片填充方式？
+//  这里的解决方案应该是什么样的？
+
+.titleContent {
+  height: 200px;
+  background: url('../image/train_signup.png') no-repeat 120px 70px;
+}
+
+.mainContainer {
+  background: url('../image/notebook-933362_1920.png') no-repeat top;
+  width: 100%;
+  padding-bottom: 45px;
+}
+@media (min-width: 1600px) {
+  .mainContainer {
+    background-size: 100%;
+  }
+}
+
+.bigTitle {
+  border-bottom: 3px solid #ff6c47;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 41px;
+  line-height: 40px;
+  float: left;
+}
+
+.smallTitle {
+  font-size: 14px;
+  color: #c6c6c6;
+  padding-top: 52px;
+  padding-left: 1px;
+  width: 345px;
+  float: left;
+}
+
+.mainContainerPad {
+  height: $_padHeight;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  font-family: 'Microsoft YaHei','PingFang SC','Helvetica Neue',Helvetica,Arial,Verdana,'Hiragino Sans GB','Noto Sans CJK SC','Source Han Sans CN',STHeiti,'WenQuanYi Micro Hei',SimSun,sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .bigTitle {
+    margin-left: 30px;
+  }
+
+  .smallTitle {
+    margin-left: 12px;
+  }
+
+  .apply {
+    width: 750px;
+    height: 100%;
+    float: left;
+    box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.15);
+
+    > .title {
+      border-bottom: $_border;
+      height: 85px;
+      width: 100%;
+    }
+    @include open-account-progress(654px, 4);
+
+    .subscribeDate {
+      width: 350px;
+      height: 24px;
+      margin: 16px auto 0;
+      background-color: #f3f3f3;
+      border-radius: 3px;
+      color: #ababab;
+      font-size: 12px;
+      padding: 3px 25px;
+      -moz-box-shadow: $_insertShadow;
+      -webkit-box-shadow: $_insertShadow;
+      box-shadow: $_insertShadow;
+    }
+
+    .type {
+      height: 100px;
+      width: $_inputSepWidth;
+      margin: 53px auto 0;
+      border-bottom: 1px solid #CCC;
+
+      > .title {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      > .buttons {
+        width: 362px;
+        height: 27px;
+        margin: 23px auto 0;
+
+        input {
+          // width: 116px;
+          height: 100%;
+          padding: 0 9px;
+          border-radius: 3px;
+          display: inline-block;
+          border: 1px solid #CCC;
+          color: #999;
+          font-size: 12px;
+          cursor: pointer;
+        }
+
+        .active {
+          border: 1px solid #ff6c47;
+          color: #ff6c47;
+          background: url('../image/simulate_open_account_button_active.png') no-repeat 100% -1px;
+        }
+      }
+    }
+
+    .inputPad {
+      height: 405px;
+      width: 100%;
+
+      > .alert {
+        text-align: center;
+        margin: 59px auto 48px;
+
+        span {
+          font-weight: bold;
+          font-size: 18px;
+        }
+      }
+
+      .inputItem {
+        height: 40px;
+        width: 100%;
+        margin-bottom: 13px;
+
+        > .title {
+          width: 240px;
+          height: 100%;
+          text-align: right;
+          display: inline-block;
+          line-height: 40px;
+          font-weight: bold;
+        }
+
+        > input {
+          height: 100%;
+          width: 270px;
+          border: 1px solid rgba(0, 0, 0, 0.25);
+          border-radius: 4px;
+          padding-left: 8px;
+        }
+
+        > .info {
+          color: rgba(0, 0, 0, 0.5);
+          font-size: 12px;
+          margin-left: 5px;
+        }
+
+        > .inputWarn {
+          color: red;
+        }
+
+        #addressInput {
+          width: 300px;
+        }
+
+        #verifyCodeInput {
+          width: 160px;
+        }
+
+        &:nth-child(5) {
+          > .title {
+            float: left;
+          }
+
+          > .muti-select {
+            margin-left: 5px;
+            float: left;
+            display: inline-block;
+
+            select {
+              height: 40px;
+              background-color: white;
+              border: 1px solid rgba(0, 0, 0, 0.25);
+              min-width: 93px;
+              cursor: pointer;
+            }
+
+            .second {
+              min-width: 172px;
+            }
+          }
+
+          > .info {
+            float: left;
+            margin-top: 10px;
+            margin-left: 10px;
+          }
+        }
+
+        &:nth-child(5) {
+          input {
+            float: left;
+            margin-left: 6px;
+          }
+
+          button {
+            margin-left: 12px;
+            width: 95px;
+            height: 24px;
+            margin-top: 8px;
+            border-radius: 3px;
+            float: left;
+          }
+
+          .active {
+            background: url('../image/simulate_open_account_get_verify_code.png') no-repeat center;
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0);
+          }
+
+          .sent {
+            background-color: #CCC;
+            color: white;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .confirmPad {
+      width: $_inputSepWidth;
+      margin: 0 auto;
+
+      button {
+        height: 44px;
+        color: white;
+        background-image: url('../image/simulate_open_account.png');
+        width: 190px;
+        margin: 0 auto;
+        cursor: pointer;
+        display: block;
+      }
+    }
+  }
+
+  .right {
+    float: right;
+    height: 100%;
+    width: 250px;
+
+    .bigTitle {
+      margin-left: 0;
+      width: 73px;
+    }
+
+    .trainResource {
+      > .title {
+        @extend ._Title;
+        .more {
+          display: inline-block;
+          margin-top: 55px;
+          margin-left: 90px;
+          color: #999;
+          font-size: 12px;
+        }
+      }
+
+      ul {
+        padding-top: 16px;
+        li {
+          height: 96px;
+          padding-left: 20px;
+          margin: 16px 0;
+          img {
+            height: 96px;
+            width: 96px;
+            float: left;
+          }
+          a {
+            display: block;
+            height: 96px;
+            float: left;
+            margin-left: 15px;
+            line-height: 96px;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}

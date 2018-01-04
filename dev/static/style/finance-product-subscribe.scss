@@ -1,0 +1,373 @@
+@import "base/common";
+@import "base/open-account-progress";
+@import "base/header-open-account";
+$_border: 1px solid #dedede;
+$_padWidth: 1000px;
+$_leftWidth: 745px;
+$_padHeight: 840px;
+$_investImmediatelyHeight: 440px;
+
+._Title {
+  width: 215px;
+  height: 85px;
+  border-bottom: $_border;
+  margin: 0 auto;
+}
+
+.titleContent {
+  height: 200px;
+  background: url('../image/finance-product-subscribe-title.png') 59px 84px no-repeat;
+}
+
+.mainContainer {
+  background: url('../image/control-writing-work-official.png') no-repeat top;
+  width: 100%;
+  padding-bottom: 45px;
+}
+@media (min-width: 1600px) {
+  .mainContainer {
+    background-size: 100%;
+  }
+}
+
+.bigTitle {
+  border-bottom: 3px solid #ff6c47;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 41px;
+  line-height: 40px;
+  float: left;
+}
+
+.smallTitle {
+  font-size: 14px;
+  color: #c6c6c6;
+  padding-top: 52px;
+  padding-left: 1px;
+  width: 345px;
+  float: left;
+}
+
+.content {
+  margin: 0 auto;
+  height: $_padHeight;
+  width: $_padWidth;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    overflow-x: auto;
+    background-color: white;
+    background-image: url("../image/container-shadow.png");
+    background-position: $_leftWidth 0;
+    background-repeat: repeat-y;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .main {
+    width: $_leftWidth;
+    height: 100%;
+    float: left;
+
+    .bigTitle {
+      margin-left: 30px;
+    }
+
+    .apply {
+      > .title {
+        border-bottom: $_border;
+        height: 85px;
+        width: 100%;
+      }
+    }
+
+    @include open-account-progress(654px, 2);
+
+    .alert {
+      text-align: center;
+      height: 35px;
+      margin-top: 85px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .inputItem {
+      height: 40px;
+      width: 100%;
+      margin-bottom: 13px;
+
+      > .title {
+        width: 236px;
+        height: 100%;
+        text-align: right;
+        display: inline-block;
+        line-height: 40px;
+        font-weight: bold;
+      }
+
+      > input {
+        height: 100%;
+        width: 270px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        padding-left: 8px;
+      }
+
+      > .info {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12px;
+        margin-left: 5px;
+      }
+
+      > .inputWarn {
+        color: red;
+      }
+
+      #addressInput {
+        width: 300px;
+      }
+
+      #verifyCodeInput {
+        width: 160px;
+      }
+
+      &#assetSize,
+      &#verifyCode {
+        > .title {
+          float: left;
+        }
+
+        select {
+          margin-left: 5px;
+          float: left;
+          display: inline-block;
+          height: 40px;
+          background-color: white;
+          border: 1px solid rgba(0, 0, 0, 0.25);
+          min-width: 270px;
+          cursor: pointer;
+        }
+
+        > .info {
+          float: left;
+          margin-top: 10px;
+          margin-left: 10px;
+        }
+      }
+
+      &#verifyCode {
+        input {
+          float: left;
+          margin-left: 5px;
+        }
+
+        button {
+          margin-left: 12px;
+          width: 95px;
+          height: 24px;
+          margin-top: 8px;
+          border-radius: 3px;
+          float: left;
+        }
+
+        .active {
+          background-image: url('../image/simulate_open_account_get_verify_code.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          cursor: pointer;
+        }
+
+        .sent {
+          background-color: #CCC;
+          color: white;
+          font-size: 12px;
+        }
+      }
+
+      &#addtionInfo {
+        height: 140px;
+        span {
+          float: left;
+        }
+        textarea {
+          display: inline-block;
+          width: 270px;
+          border: 1px solid rgba(0, 0, 0, 0.25);
+          border-radius: 4px;
+          padding: 8px;
+          height: 100%;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .confirmPad {
+
+      width: 480px;
+      margin: 0 auto;
+
+      button {
+        height: 44px;
+        color: white;
+        background-image: url('../image/assets-management-subscribe-button.png');
+        width: 190px;
+        margin: 0 auto;
+        cursor: pointer;
+        display: block;
+      }
+    }
+
+  }
+
+  .right {
+    float: right;
+    height: 100%;
+    width: 250px;
+
+    .bigTitle {
+      margin-left: 0;
+      width: 73px;
+    }
+
+    .more-service {
+      height: $_padHeight - $_investImmediatelyHeight;
+
+      > .title {
+        @extend ._Title;
+      }
+
+      .items {
+        width: 215px;
+        height: $_padHeight - $_investImmediatelyHeight - 85;
+        margin: 0 auto;
+        padding-top: 20px;
+
+        .serviceItem {
+          width: 90px;
+          height: 90px;
+          border: $_border;
+          float: left;
+          margin: 8px;
+          background-repeat: no-repeat;
+          background-position: 31px 18px;
+
+          > .hover {
+            width: 88px;
+            height: 3px;
+            position: absolute;
+            display: none;
+          }
+
+          &:hover {
+            > .hover {
+              display: block;
+            }
+          }
+
+          &:nth-child(1) {
+            background-image: url('../image/simulate_open_account_more_search.png');
+
+            > .hover {
+              background-color: #4798f3;
+            }
+          }
+
+          &:nth-child(2) {
+            background-image: url('../image/icon-book-23x24.png');
+
+            > .hover {
+              background-color: #f761af;
+            }
+          }
+
+          &:nth-child(3) {
+            background-image: url('../image/simulate_open_account_more_download_1.png');
+
+            > .hover {
+              background-color: #ff683a;
+            }
+          }
+
+          &:nth-child(4) {
+            background-image: url('../image/simulate_open_account_more_download_2.png');
+
+            > .hover {
+              background-color: #ff5656;
+            }
+          }
+
+          a {
+            display: block;
+            width: 50px;
+            margin: 0 auto;
+            height: 36px;
+            margin-top: 48px;
+            border-top: none;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .investImmediately {
+      @extend .more-service;
+      height: $_investImmediatelyHeight;
+
+      .items {
+        .serviceItem {
+          &:hover {
+            > .hover {
+              display: none;
+            }
+          }
+
+          &:nth-child(1) {
+            background-image: url('../image/open-nav-1.png');
+
+            > .hover {
+              background-color: #F00;
+            }
+          }
+
+          &:nth-child(2) {
+            background-image: url('../image/qi_quan_kai_hu.png');
+
+            > .hover {
+              background-color: #F00;
+            }
+          }
+
+          &:nth-child(3) {
+            background-image: url('../image/open-nav-2.png');
+
+            > .hover {
+              background-color: #F00;
+            }
+          }
+
+          &:nth-child(4) {
+            background-image: url('../image/open-nav-3.png');
+
+            > .hover {
+              background-color: #F00;
+            }
+          }
+
+          &:nth-child(5) {
+            background-image: url('../image/open-nav-4.png');
+
+            > .hover {
+              background-color: #F00;
+            }
+          }
+        }
+      }
+    }
+  }
+}

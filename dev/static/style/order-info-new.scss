@@ -1,0 +1,175 @@
+@import "base/overlay-pad";
+@include overlay-pad(360px);
+
+.overlay {
+  // display: none;
+  .buttons {
+    width: 238px;
+    height: 27px;
+    margin: 0 auto;
+
+    input {
+      width: 116px;
+      height: 100%;
+      padding: 0 9px;
+      border-radius: 3px;
+      display: inline-block;
+      border: 1px solid #CCC;
+      color: #999;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .active {
+      border: 1px solid #ff6c47;
+      color: #ff6c47;
+      background-image: url('../image/simulate_open_account_button_active.png');
+      background-position: 100% -1px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .sep {
+    background-color: #CCC;
+    height: 1px;
+    width: 268px;
+    margin: 14px auto 0;
+  }
+
+  .items {
+
+    .item {
+      height: 40px;
+      width: 268px;
+      margin: 12px auto;
+      border: 1px solid #aaa;
+      border-radius: 2px;
+
+      .icon {
+        float: left;
+        background-color: #f8fcff;
+        border-right: 1px solid #d7e9fb;
+        height: 100%;
+        width: 37px;
+      }
+
+      input[type=text] {
+        height: 100%;
+        width: 266px - 38px;
+        padding-left: 12px;
+      }
+
+      &#invoiceHeader {
+        .icon {
+          background-image: url("../image/pen_leather_16.160804020101px_1171206_easyicon.net.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      &#addressSelector {
+        border: none;
+        .muti-select {
+          margin-left: 5px;
+          float: left;
+          display: inline-block;
+
+          select {
+            height: 40px;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            width: 83px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &#postcode {
+        .icon {
+          background: url("../image/stamp_16px_1157361_easyicon.net.png") center no-repeat;
+        }
+      }
+
+      &#address {
+        .icon {
+          background-image: url("../image/location_16px_1098254_easyicon.net.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      &#name {
+        .icon {
+          background-image: url("../image/1480497346_87.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      &#phoneNumber {
+        .icon {
+          background-image: url("../image/mobile_16px_1143474_easyicon.net.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      img {
+        width: 76px;
+        height: 27px;
+        display: inline;
+        position: absolute;
+        bottom: 6px;
+        right: -90px;
+      }
+    }
+  }
+
+  .additionInfo {
+    height: 56px;
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1) inset;
+
+    p {
+      text-align: center;
+      color: #666;
+      line-height: 56px;
+    }
+    margin-top: 21px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  #invoiceInfo {
+    height: 538px;
+
+    .title {
+      height: 72px;
+      line-height: 72px;
+      width: 100%;
+      text-align: center;
+    }
+
+    #saveBtn {
+      width: 190px;
+      margin: 0 auto;
+      display: block;
+      height: 44px;
+      border-radius: 6px;
+      background-repeat: no-repeat;
+      background-image: url('../image/save_btn.png');
+    }
+  }
+
+  .pad {
+    margin-top: 20px;
+
+    input[type=button] {
+      cursor: pointer;
+    }
+  }
+}

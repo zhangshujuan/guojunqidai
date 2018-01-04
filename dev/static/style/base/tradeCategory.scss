@@ -1,0 +1,53 @@
+.tradeCategory {
+  height: 142px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+
+  .title {
+    width: 134px;
+    float: left;
+    padding: 27px 0 0 40px;
+    font-size: 18px;
+  }
+
+  ul {
+    float: left;
+    display: block;
+    height: 100%;
+    padding-top: 27px;
+
+    li {
+      padding-left: 16px;
+      background-repeat: no-repeat;
+      background-position: left center;
+
+      span {
+        font-size: 12px;
+      }
+
+      .place {
+        color: #666;
+      }
+
+      .items {
+        color: #999;
+      }
+
+      &:nth-child(1) {
+        background-image: url("../image/tradeCategory_sqs.png");
+      }
+
+      &:nth-child(2) {
+        background-image: url("../image/tradeCategory_zss.png");
+      }
+
+      &:nth-child(3) {
+        background-image: url("../image/tradeCategory_dss.png");
+      }
+
+      &:nth-child(4) {
+        background-image: url("../image/tradeCategory_zjs.png");
+      }
+    }
+  }
+}
