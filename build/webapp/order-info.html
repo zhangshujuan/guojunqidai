@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link rel="stylesheet" href="../static/style/shoping-cart.css">
+    <link rel="stylesheet" href="../static/script/swiper/swiper-3.4.0.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="../static/script/original/html5shiv/html5shiv-min.js"></script>
+    <script src="../static/script/original/respondjs/respond-min.js"></script>
+    <![endif]-->
+    <script src="../static/script/plugins/jquery/jquery.min.js"></script>
+    <script src="../static/script/plugins/jquery/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+
+<header class="header-index">
+    <div class="container">
+        <a href="javascript:void(0);" class="logo-1"></a>
+        <a href="javascript:void(0);" class="logo-2"></a>
+        <div class="location">
+            <p class="text">上海</p>
+        </div>
+        <div class="search-box">
+            <div class="input-box">
+                <input type="text" class="input-search" placeholder="热门搜索：期货热门资讯">
+            </div>
+            <div class="btn-box">
+                <button class="btn-search"></button>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="my-account">我的账户</a>
+        <a href="javascript:void(0);" class="my-shopcar">我的购物车</a>
+    </div>
+</header>
+
+<section class="navbar">
+    <div class="container">
+        <nav class="nav">
+            <ul>
+                <li class="li-all active"><a href="javascript:void(0);">全部</a></li>
+                <li><a href="javascript:void(0);">期货资讯类</a></li>
+                <li><a href="javascript:void(0);">技术服务类</a></li>
+                <li><a href="javascript:void(0);">线上培训类</a></li>
+                <li><a href="javascript:void(0);">理财产品类</a></li>
+                <li><a href="javascript:void(0);">资管产品类</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<section class="main">
+    <div class="container">
+        <div class="content clearfix">
+            <div class="content-left">
+                <div class="progress">
+                    <div class="title">
+                        1.查看购物车
+                    </div>
+                    <div class="title currentProgress">
+                        2.确认订单信息
+                    </div>
+                    <div class="title">
+                        3.订单支付
+                    </div>
+                </div>
+                <div class="title common-title">
+                    <div class="bigTitle">确认订单信息</div>
+                    <a href="#" class="smallTitle">继续选购 &gt;&gt;</a>
+                    <div class="pull-right">用户名：56788765</div>
+                </div>
+                <table class="table-cart">
+                    <tr>
+                        <th width="35%">产品信息</th>
+                        <th width="15%">单价</th>
+                        <th width="20%">数量</th>
+                        <th width="15%">总额</th>
+                        <th width="15%">操作</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="product-info clearfix">
+                                <input type="checkbox" id="" name="" class="checkbox">
+                                <a href="#"><img src="../static/image/example-1.png" alt=""></a>
+                                <a href="#">CTP产品包</a>
+                            </div>
+                        </td>
+                        <td><div class="ft12">23.23</div></td>
+                        <td>
+                            <div class="item-amount clearfix">
+                                <a href="javascript:;" class="J_Minus no-minus">-</a>
+                                <input type="text" value="1" class="text text-amount" >
+                                <a href="javascript:;" class="J_Plus plus">+</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ft12 col-orange">￥23.23</div>
+                        </td>
+                        <td>
+                            <a href="javascript:;" class="del-row">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="product-info clearfix">
+                                <input type="checkbox" id="" name="" class="checkbox">
+                                <a href="#"><img src="../static/image/example-1.png" alt=""></a>
+                                <a href="#">CTP产品包</a>
+                            </div>
+                        </td>
+                        <td><div class="ft12">23.23</div></td>
+                        <td>
+                            <div class="item-amount clearfix">
+                                <a href="javascript:;" class="J_Minus no-minus">-</a>
+                                <input type="text" value="1" class="text text-amount" >
+                                <a href="javascript:;" class="J_Plus plus">+</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ft12 col-orange">￥23.23</div>
+                        </td>
+                        <td>
+                            <a href="javascript:;" class="del-row">删除</a>
+                        </td>
+                    </tr>
+                </table>
+                <div class="title common-title">
+                    <div class="bigTitle">确认收件信息</div>
+                </div>
+                <form action="">
+                    <div class="form-group">
+                        <label>收件地址：</label>
+                        <input class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>客户姓名：</label>
+                        <input class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>联系电话：</label>
+                        <input class="form-control">
+                    </div>
+                </form>
+                <div class="clearfix amount">
+                    <div class="pull-left">如您需开具发票，请点击需要发票，填写相关信息</div>
+                    <div class="pull-right">
+                        合计金额：<span class="ft24 col-orange">￥0.00</span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <a class="pull-right btn-balance btn-submit" href="#">提交订单</a>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="title common-title">
+                    <div class="bigTitle">热门推荐</div>
+                </div>
+                <ul class="clearfix">
+                    <li>
+                        <div class="imgbox"><img src="../static/image/example-1.png"></div>
+                        <div class="info-box">
+                            <h1>策略提示</h1>
+                            <div class="price-box clearfix">
+                                <p class="price-really">￥26,700.00</p>
+                                <p class="price-vip">￥23,200.00</p>
+                            </div>
+                            <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                            <div class="btn-box clearfix">
+                                <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgbox"><img src="../static/image/example-3.png"></div>
+                        <div class="info-box">
+                            <h1>策略提示</h1>
+                            <div class="price-box clearfix">
+                                <p class="price-really">￥26,700.00</p>
+                                <p class="price-vip">￥23,200.00</p>
+                            </div>
+                            <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                            <div class="btn-box clearfix">
+                                <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgbox"><img src="../static/image/example-6.png"></div>
+                        <div class="info-box">
+                            <h1>策略提示</h1>
+                            <div class="price-box clearfix">
+                                <p class="price-really">￥26,700.00</p>
+                                <p class="price-vip">￥23,200.00</p>
+                            </div>
+                            <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                            <div class="btn-box clearfix">
+                                <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="clearfix box-1">
+            <a href="javascript:void(0);" class="btn-web">国泰君安期货官网</a>
+            <a href="javascript:void(0);" class="btn-help">帮助中心</a>
+            <p class="tel">联系我们：</p>
+        </div>
+        <div class="clearfix box-2">
+            <p class="copy">版权所有&copy; 2014 国泰君安期货有限公司&nbsp;&nbsp;沪ICP备06059277号</p>
+            <p class="industry">上海工商</p>
+            <p class="licence">营业执照</p>
+        </div>
+
+        <div class="wechat wechat-1">微信订阅号</div>
+        <div class="wechat wechat-2">微信服务号</div>
+    </div>
+</footer>
+<script>
+    $(function () {
+        var index = {
+            init: function () {
+                index.headerNavBind();
+                index.delRow();
+                index.changeAmount();
+                index.selectProduct();
+            },
+            headerNavBind: function () {
+                var navItem = $('.navbar .nav ul li');
+
+                navItem.on('click', function () {
+                    var _this = $(this);
+
+                    if (_this.hasClass('active')) {
+                        return false;
+                    } else {
+                        _this.addClass('active').siblings().removeClass('active');
+                    }
+                });
+            },
+            delRow:function(){
+                $(".del-row").click(function(){
+                    $(this).parents("tr").remove();
+                });
+            },
+            changeAmount:function(){
+                var amount;
+                $(".J_Plus").click(function(){
+                    var inputObj = $(this).prev();
+                    var lineObj = $(this).parents("tr").find(".col-orange");
+                    var linePrice = $(this).parents("td").prev().find(".ft12").text();
+                    var allPriceObj = $(".amount .col-orange");
+                    amount = inputObj.val();
+                    amount++;
+                    inputObj.val(amount);
+                    lineObj.text("￥"+parseFloat(linePrice)*amount);
+                    index.forEach(allPriceObj);
+                });
+                $(".J_Minus").click(function(){
+                    var inputObj = $(this).next();
+                    var lineObj = $(this).parents("tr").find(".col-orange");
+                    var linePrice = $(this).parents("td").prev().find(".ft12").text();
+                    var allPriceObj = $(".amount .col-orange");
+                    amount = inputObj.val();
+                    if(amount >1){
+                        amount--;
+                    }
+                    inputObj.val(amount);
+                    lineObj.text("￥"+parseFloat(linePrice)*amount);
+                    index.forEach(allPriceObj);
+                });
+            },
+            selectProduct:function() {
+                $(".checkbox").click(function () {
+                    var allPriceObj = $(".amount .col-orange");
+                    index.forEach(allPriceObj);
+                });
+            },
+            forEach:function(allPriceObj) {
+                var allPrice = 0;
+                $(".checkbox").each(function(){
+                    var $this = $(this);
+                    var ischecked = $this.prop("checked");
+                    var childNum = $this.parents("tr").find(".col-orange").text().replace("￥", "");
+                    if (ischecked == true) {
+                        allPrice = allPrice + parseFloat(childNum);
+                    }
+                });
+                allPriceObj.text("￥"+allPrice.toFixed(2));
+            }
+        };
+
+        index.init();
+    });
+</script>
+</body>
+</html>

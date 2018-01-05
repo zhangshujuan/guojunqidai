@@ -1,0 +1,7 @@
+/**
+ * @author 
+ * @email 
+ * @descrip guojunqidai
+ * @version v1.0.0
+ */
+.input-number{width:36px;padding:0 12px;vertical-align:top;text-align:center;border-top:2px solid #ccc;border-bottom:2px solid #ccc;outline:0;font-size:16px}.input-number,.input-number-decrement,.input-number-increment{height:30px;user-select:none}.input-number-decrement,.input-number-increment{display:inline-block;width:30px;line-height:30px;color:#fff;background:#ccc;text-align:center;font-weight:700;cursor:pointer}.input-number-decrement:active,.input-number-increment:active{background:#ddd}.input-number-decrement{border-right:none;border-radius:4px 0 0 4px}.input-number-increment{border-left:none;border-radius:0 4px 4px 0}

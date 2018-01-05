@@ -1,0 +1,7 @@
+/**
+ * @author 
+ * @email 
+ * @descrip guojunqidai
+ * @version v1.0.0
+ */
+define(function(require,exports){function r(r){var e,a=new Array(7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2,1),u=new Array("1","0","X","9","8","7","6","5","4","3","2"),s=new Array,o=0,f=r.length,d=r;if(15!=f&&18!=f)return!1;for(i=0;i<f;i++){if(s[i]=d.charAt(i),(s[i]<"0"||s[i]>"9")&&17!=i)return!1;i<17&&(s[i]=s[i]*a[i])}if(18==f){var v=d.substring(6,14);if(0==n(v))return!1;for(i=0;i<17;i++)o+=s[i];if(e=u[o%11],s[17]!=e)return!1}else{var c=d.substring(6,12);if(0==t(c))return!1}return!0}function t(r){if(!/^[0-9]{6}$/.test(r))return!1;var t,i;return t=r.substring(0,4),i=r.substring(4,6),!(t<1700||t>2500)&&!(i<1||i>12)}function n(r){if(!/^[0-9]{8}$/.test(r))return!1;var t,i,n;t=r.substring(0,4),i=r.substring(4,6),n=r.substring(6,8);var e=[31,28,31,30,31,30,31,31,30,31,30,31];return!(t<1700||t>2500)&&((t%4==0&&t%100!=0||t%400==0)&&(e[1]=29),!(i<1||i>12)&&!(n<1||n>e[i-1]))}var $=require("jquery");require("./jquery-validator"),$.validator.addMethod("mobile",function(r,t){var i=r.length,n=/^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;return this.optional(t)||11==i&&n.test(r)},"手机号码格式错误"),$.validator.addMethod("isTo",function(r,t,i){if(""==r)return!0;var n=i.split("|"),e=parseInt(r,10),a=parseInt($(n[1]).val(),10);switch(n[0]){case">=":return e>=a;case"<=":return e<=a;case"==":return e==a;case"range":var u=parseInt($(n[2]).val(),10);return e>=a&&e<=u}}),$.validator.addMethod("isIdCardNo",function(t,i){return this.optional(i)||r(t)},"请正确输入您的身份证号码")});

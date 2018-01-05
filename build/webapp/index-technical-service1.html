@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>技术服务预约</title>
+  <link rel="stylesheet" href="../static/style/technicalService.css">
+  <link rel="stylesheet" href="../static/script/swiper/swiper-3.4.0.min.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="../static/script/original/html5shiv/html5shiv-min.js"></script>
+    <script src="../static/script/original/respondjs/respond-min.js"></script>
+    <![endif]-->
+  <script src="../static/script/plugins/jquery/jquery.min.js"></script>
+  <script src="../static/script/plugins/jquery/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body>
+  <header class="header-open-account">
+    <div class="topbar">
+      <div class="container clearfix">
+        <div class="bar-left">
+          <a href="javascript:void(0);" class="btn-mall">金融商城</a>
+          <a href="javascript:void(0);" class="btn-download">软件下载</a>
+        </div>
+
+        <div class="bar-right">
+          <div class="user clearfix">
+            <p>上午好，王XX</p>
+            <a href="javascript:void(0);" class="logout">退出</a>
+          </div>
+          <a href="javascript:void(0);" class="weibo"></a>
+          <a href="javascript:void(0);" class="shenmegui"></a>
+          <a href="javascript:void(0);" class="wechat">
+            <div class=""></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <div class="container clearfix">
+        <a href="javascript:void(0);" class="logo"></a>
+
+        <nav class="nav">
+          <ul class="clearfix">
+            <li><a href="javascript:void(0);">首页</a></li>
+            <li class="active"><a href="javascript:void(0);">开户</a></li>
+            <li><a href="javascript:void(0);">理财</a></li>
+            <li><a href="javascript:void(0);">商城</a></li>
+            <li><a href="javascript:void(0);">培训</a></li>
+            <li><a href="javascript:void(0);">技术服务</a></li>
+          </ul>
+        </nav>
+
+        <div class="tel"></div>
+      </div>
+    </div>
+  </header>
+  <section class="index-banner">
+    <div id="focusPic" class="focusPic">
+      <div class="hd">
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+          <li>
+            <a href="#" target="_blank">
+              <div style="background-image:url('../static/image/banner-01-1600x432.png');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                  src='../static/image/banner-01-1600x432.png',
+                  sizingMethod='scale');"></div>
+      </a>
+      </li>
+      <li>
+        <a href="#" target="_blank">
+          <div style="background-image:url('../static/image/index-banner-2-1600x432.jpg');filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                  src='../static/image/index-banner-2-1600x432.jpg',
+                  sizingMethod='scale');"></div>
+    </a>
+    </li>
+    </ul>
+    </div>
+
+    </div>
+  </section>
+
+  <section class="main">
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-33">
+          <div class="text-center">
+            <div class="product-type">CTP产品服务包</div>
+          </div>
+          <table>
+            <tr>
+              <td>推荐服务机型</td>
+              <td>超微服务器</td>
+            </tr>
+            <tr>
+              <td>操作系统</td>
+              <td>Linux</td>
+            </tr>
+            <tr>
+              <td>光网卡</td>
+              <td>Solarflare万兆多模模块</td>
+            </tr>
+            <tr>
+              <td>系统选型</td>
+              <td>miniCTP</td>
+            </tr>
+            <tr>
+              <td>行情源选型</td>
+              <td>UDP快速行情</td>
+            </tr>
+            <tr>
+              <td>机房位置选择</td>
+              <td>移动机房</td>
+            </tr>
+            <tr>
+              <td>软件选型</td>
+              <td>TB开拓者</td>
+            </tr>
+            <tr>
+              <td>操作</td>
+              <td>套利</td>
+            </tr>
+            <tr>
+              <td>所需费用约</td>
+              <td>109,000(元)</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-66" id="inputPad">
+          <div class="inputItem">
+            <span class="title">预约人姓名：</span>
+            <input type="text" id="nameInput" name="name" value="">
+            <span class="info" id="nameInfo">请填写预约人姓名</span>
+          </div>
+          <div class="inputItem">
+            <span class="title">手机号：</span>
+            <input type="text" id="phoneNumberInput" name="name" value="">
+            <span class="info" id="phoneNumberInfo">请正确填写，否则将影响申请！</span>
+          </div>
+          <div class="inputItem" id="verifyCode">
+            <span class="title">验证码：</span>
+            <input type="text" id="verifyCodeInput" name="name" value="">
+            <button type="submit" id="getVerifyCodeBtn" class="active" name="获取验证码"></button>
+            <span class="info" id="verifyCodeInfo">请填写验证码</span>
+          </div>
+          <div class="inputItem" id="subscribeTime">
+            <span class="title">预约时间：</span>
+            <input placeholder="请输入日期" class="laydate-icon" onclick="laydate()">
+            <span class="info" id="subscribeTimeInfo">请选择预约时间</span>
+          </div>
+          <div class="inputItem" id="address">
+            <span class="title">所在地区：</span>
+            <div class="muti-select">
+              <fieldset id="custom_data_address">
+                <label>
+                  <select id="province" class="first select"><option value="">请选择</option><option value="2">北京</option><option value="24">上海</option><option value="30">浙江</option><option value="16">江苏</option><option value="1">安徽</option><option value="6">广东</option><option value="7">广西</option><option value="9">海南</option><option value="23">山东</option><option value="4">福建</option><option value="26">天津</option><option value="13">湖北</option><option value="14">湖南</option><option value="25">四川</option><option value="3">重庆</option><option value="20">宁夏</option><option value="17">江西</option><option value="18">吉林</option><option value="19">辽宁</option><option value="11">黑龙江</option><option value="10">河北</option><option value="12">河南</option><option value="22">山西</option><option value="31">陕西</option><option value="29">云南</option><option value="8">贵州</option><option value="27">西藏</option><option value="5">甘肃</option><option value="21">青海</option><option value="28">新疆</option><option value="15">内蒙古</option><option value="32">台湾</option><option value="33">香港</option><option value="34">澳门</option><option value="35">海外</option></select>
+                </label>
+                <label>
+                  <select id="city" class="second select" disabled=""></select>
+                </label>
+                <label>
+                  <select id="region" class="third select" disabled=""></select>
+                </label>
+              </fieldset>
+            </div>
+            <span class="info" id=""></span>
+          </div>
+          <div class="confirmPad">
+            <button type="submit" name="确认无误，提交"></button>
+          </div>
+        </div>
+        <div class="col-66" id="successPad">
+          <img src="../static/image/simulate_finish_account-right.png" alt="">
+          <div class="bigText">
+            您的预约已成功！
+          </div>
+          <div class="smailText">
+            我们的工作人员将尽快与您联系。<br/>感谢您对国泰君安期货的支持！
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bottom-info">
+    <div class="clearfix container">
+      <div class="pull-left">
+        <img src="../static/image/icon-ask-60x60.png" alt="">
+        <div class="text-center">技术服务帮助</div>
+      </div>
+      <div class="pull-right">
+        <div class="pull-left">
+          <ul>
+            <li><a href="#"><span>●</span> 什么是网上开户？</a></li>
+            <li><a href="#"><span>●</span> 网上开户前要做哪些准备？</a></li>
+            <li><a href="#"><span>●</span> 什么是资金帐户？</a></li>
+          </ul>
+        </div>
+        <div class="pull-left">
+          <ul>
+            <li><a href="#"><span>●</span> 什么是网上开户？</a></li>
+            <li><a href="#"><span>●</span> 网上开户前要做哪些准备？</a></li>
+            <li><a href="#"><span>●</span> 什么是资金帐户？</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="clearfix box-1">
+        <a href="javascript:void(0);" class="btn-web">国泰君安期货官网</a>
+        <a href="javascript:void(0);" class="btn-help">帮助中心</a>
+        <p class="tel">联系我们：</p>
+      </div>
+      <div class="clearfix box-2">
+        <p class="copy">版权所有&copy; 2014 国泰君安期货有限公司&nbsp;&nbsp;沪ICP备06059277号</p>
+        <p class="industry">上海工商</p>
+        <p class="licence">营业执照</p>
+      </div>
+
+      <div class="wechat wechat-1">微信订阅号</div>
+      <div class="wechat wechat-2">微信服务号</div>
+    </div>
+  </footer>
+  <script>
+    $(function() {
+
+      var index = {
+        init: function() {
+          index.headerNavBind();
+
+          $(".focusPic").slide({
+            mainCell: ".bd ul",
+            autoPlay: true
+          });
+          //IE8的left兼容性
+          var windowW = $(window).width();
+          var hdW = $("#focusPic .hd").width();
+          $("#focusPic .hd").css("left", (windowW - hdW) / 2);
+          $('.confirmPad').find('button').click(function(){
+            $('#inputPad').css('display', 'none');
+            $('#successPad').css('display', 'block');
+          });
+        },
+        headerNavBind: function() {
+          var navItem = $('.navbar .nav ul li');
+
+          navItem.on('click', function() {
+            var _this = $(this);
+
+            if (_this.hasClass('active')) {
+              return false;
+            } else {
+              _this.addClass('active').siblings().removeClass('active');
+            }
+          });
+        }
+      };
+
+      index.init();
+    });
+  </script>
+  <script type="text/javascript" src="../static/script/plugins/cxselect/jquery.cxselect.min.js"></script>
+  <script type="text/javascript">
+    //  需按固定格式修改 json 内容
+    //  http://code.ciaoca.com/jquery/cxSelect/
+
+    $('#custom_data_address').cxSelect({
+      url: "../static/script/plugins/jquery/cityAddress.json",
+      selects: ['first', 'second', 'third'],
+      jsonName: 'n',
+      jsonValue: 'v',
+      jsonSub: 's',
+    })
+
+    var getVerifyCodeBtn = $('#getVerifyCodeBtn')
+    var sleep_length = 30;
+    var sleep_count = sleep_length;
+    var interval = null;
+    getVerifyCodeBtn.click(function() {
+
+      //  TODO: ajax
+
+      getVerifyCodeBtn.removeClass('active')
+      getVerifyCodeBtn.addClass('sent')
+      getVerifyCodeBtn.text(sleep_count-- + "秒");
+
+      interval = setInterval(function() {
+        if (sleep_count == 0) {
+          if (!!interval) {
+            clearInterval(interval);
+            interval = null;
+            sleep_count = sleep_length;
+            getVerifyCodeBtn.attr({
+              'disabled': false
+            });
+            getVerifyCodeBtn.addClass('active')
+            getVerifyCodeBtn.removeClass('sent')
+          }
+          return false
+        }
+        getVerifyCodeBtn.text(sleep_count-- + "秒");
+      }, 1000);
+
+    })
+
+    function bindingValidate(input, info, regex) {
+      input.on('blur', function() {
+        var text = input.val()
+        if (text.match(regex)) {
+          info.removeClass('inputWarn')
+        } else {
+          info.addClass('inputWarn')
+        }
+      })
+    }
+
+    // TODO: regex
+    bindingValidate(
+      $('#productNameInput'),
+      $('#productNameInfo'),
+      /^[0-9A-Za-z\u4e00-\u9fa5]{1,}$/
+    )
+
+    bindingValidate(
+      $('#nameInput'),
+      $('#nameInfo'),
+      /^[\u4e00-\u9fa5]{2,4}$/
+    )
+
+    bindingValidate(
+      $('#phoneNumberInput'),
+      $('#phoneNumberInfo'),
+      /^(((1[3456789][0-9]{1})|(15[0-9]{1}))+\d{8})$/
+    )
+
+    //  4 位字母数字验证码
+    bindingValidate(
+      $('#verifyCodeInput'),
+      $('#verifyCodeInfo'),
+      /[0-9A-Za-z]{4}$/
+    )
+  </script>
+  <script src="../static/script/plugins/laydate/laydate.js"></script>
+
+</body>
+
+</html>

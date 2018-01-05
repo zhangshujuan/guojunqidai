@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link rel="stylesheet" href="../static/style/index.css">
+    <link rel="stylesheet" href="../static/script/swiper/swiper-3.4.0.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="../static/script/original/html5shiv/html5shiv-min.js"></script>
+    <script src="../static/script/original/respondjs/respond-min.js"></script>
+    <![endif]-->
+    <script src="../static/script/plugins/jquery/jquery.min.js"></script>
+    <script src="../static/script/plugins/jquery/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+
+<header class="header-index">
+    <div class="container">
+        <a href="javascript:void(0);" class="logo-1"></a>
+        <a href="javascript:void(0);" class="logo-2"></a>
+        <div class="location">
+            <p class="text">上海</p>
+        </div>
+        <div class="search-box">
+            <div class="input-box">
+                <input type="text" class="input-search" placeholder="热门搜索：期货热门资讯">
+            </div>
+            <div class="btn-box">
+                <button class="btn-search"></button>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="my-account">我的账户</a>
+        <a href="javascript:void(0);" class="my-shopcar">我的购物车</a>
+        <!--未登录窗口
+        <div class="login-modal">
+            <div class="modal-top">
+                <h1>账户中心登录</h1>
+                <a href="javascript:void(0);" class="btn-login"></a>
+                <a href="javascript:void(0);" class="btn-reg"></a>
+                <div class="forget">
+                    <a href="javascript:void(0);" class="btn-forget">忘记登录密码？</a>
+                </div>
+            </div>
+
+            <div class="modal-bottom">VIP客户尊享更多优惠</div>
+        </div>-->
+        <!--已登录窗口-->
+        <div class="login-modal already-login">
+            <div class="modal-top">
+                <div class="text-center">
+                    <img src="../static/image/example-2.png" alt="" class="userImg">
+                </div>
+                <div class="text-center ft18">尊敬的XX</div>
+                <div class="text-center ft12">欢迎您登录国泰君安期货金融商城</div>
+            </div>
+
+            <div class="modal-bottom">
+                <div class="text-center col-orange">绑定资金帐号后尊享VIP价格</div>
+                <div class="btn-bind"></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="navbar">
+    <div class="container">
+        <nav class="nav">
+            <ul>
+                <li class="li-all active"><a href="javascript:void(0);">全部</a></li>
+                <li><a href="javascript:void(0);">期货资讯类</a></li>
+                <li><a href="javascript:void(0);">技术服务类</a></li>
+                <li><a href="javascript:void(0);">线上培训类</a></li>
+                <li><a href="javascript:void(0);">理财产品类</a></li>
+                <li><a href="javascript:void(0);">资管产品类</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<section class="index-banner">
+    <div id="focusPic" class="focusPic">
+        <div class="hd">
+            <ul><li></li><li></li></ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <div style="background-image:url('../static/image/index-banner-1-1600x432.jpg');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                  src='../static/image/index-banner-1-1600x432.jpg',
+                  sizingMethod='scale');"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <div style="background-image:url('../static/image/index-banner-2-1600x432.jpg');filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                  src='../static/image/index-banner-2-1600x432.jpg',
+                  sizingMethod='scale');"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="txtMarquee-left">
+            <div class="bd">
+                <ul class="infoList">
+                    <li>30秒闪电预约 客户经理24小时内与您确定开户时间</li>
+                    <li>30秒闪电预约 客户经理24小时内与您确定开户时间</li>
+                    <li>30秒闪电预约 客户经理24小时内与您确定开户时间</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content clearfix">
+            <div class="content-left">
+                <div class="tabnav">
+                    <ul>
+                        <li class="active">期货资讯类</li>
+                        <li>技术服务类</li>
+                        <li>线上培训类</li>
+                        <li>理财产品类</li>
+                        <li>资管产品类</li>
+                    </ul>
+                </div>
+
+                <div class="tablist">
+                    <ul class="clearfix show">
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-1.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥26,700.00</p>
+                                    <p class="price-vip">￥23,200.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-2.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥5,200.00</p>
+                                    <p class="price-vip">￥3,600.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-3.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥26,700.00</p>
+                                    <p class="price-vip">￥23,200.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-4.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥26,700.00</p>
+                                    <p class="price-vip">￥23,200.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-5.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥26,700.00</p>
+                                    <p class="price-vip">￥23,200.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-6.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥26,700.00</p>
+                                    <p class="price-vip">￥23,200.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <a href="javascript:void(0);" class="btn-more">更多 &gt;&gt;</a>
+                    </ul>
+                    <ul class="clearfix">
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-1.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥26,700.00</p>
+                                    <p class="price-vip">￥23,200.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <a href="javascript:void(0);" class="btn-more">更多 &gt;&gt;</a>
+                    </ul>
+                    <ul class="clearfix">
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-2.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥5,200.00</p>
+                                    <p class="price-vip">￥3,600.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-3.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥26,700.00</p>
+                                    <p class="price-vip">￥23,200.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <a href="javascript:void(0);" class="btn-more">更多 &gt;&gt;</a>
+                    </ul>
+                    <ul class="clearfix">
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-1.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥26,700.00</p>
+                                    <p class="price-vip">￥23,200.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <a href="javascript:void(0);" class="btn-more">更多 &gt;&gt;</a>
+                    </ul>
+                    <ul class="clearfix">
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-1.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥26,700.00</p>
+                                    <p class="price-vip">￥23,200.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox"><img src="../static/image/example-2.png"></div>
+                            <div class="info-box">
+                                <h1>策略提示</h1>
+                                <div class="price-box clearfix">
+                                    <p class="price-really">￥5,200.00</p>
+                                    <p class="price-vip">￥3,600.00</p>
+                                </div>
+                                <div class="desc">国泰君安期货推出”策略提示QQ服务群提供各类交易策略</div>
+                                <div class="btn-box clearfix">
+                                    <a href="javascript:void(0);" class="btn-buy">立即购买</a>
+                                    <a href="javascript:void(0);" class="btn-add">加入购物车</a>
+                                </div>
+                            </div>
+                        </li>
+                        <a href="javascript:void(0);" class="btn-more">更多 &gt;&gt;</a>
+                    </ul>
+                </div>
+
+                <div class="more-service">
+                    <h1>更多服务</h1>
+
+                    <ul class="clearfix">
+                        <li class="li-1"><a href="javascript:void(0);">营业网点<br/>查询</a></li>
+                        <li class="li-2"><a href="javascript:void(0);">体验综合<br/>金融服务</a></li>
+                        <li class="li-3"><a href="javascript:void(0);">期货软件<br/>下载</a></li>
+                        <li class="li-4"><a href="javascript:void(0);">股票软件<br/>下载</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-right">
+                <div class="title new-title">
+                    <h1>新手指引</h1>
+                </div>
+                <div class="new-box"></div>
+
+                <div class="title invest-title">
+                    <h1>立即投资</h1>
+                </div>
+                <div class="invest-box">
+                    <ul class="clearfix">
+                        <li class="li-1"><a href="javascript:void(0);">期货开户</a></li>
+                        <li class="li-2"><a href="javascript:void(0);">期权开户</a></li>
+                        <li class="li-3"><a href="javascript:void(0);">证券开户</a></li>
+                        <li class="li-4"><a href="javascript:void(0);">商品期货<br/>模拟账号</a></li>
+                        <li class="li-5"><a href="javascript:void(0);">金融期货<br/>仿真账号</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="clearfix box-1">
+            <a href="javascript:void(0);" class="btn-web">国泰君安期货官网</a>
+            <a href="javascript:void(0);" class="btn-help">帮助中心</a>
+            <p class="tel">联系我们：</p>
+        </div>
+        <div class="clearfix box-2">
+            <p class="copy">版权所有&copy; 2014 国泰君安期货有限公司&nbsp;&nbsp;沪ICP备06059277号</p>
+            <p class="industry">上海工商</p>
+            <p class="licence">营业执照</p>
+        </div>
+
+        <div class="wechat wechat-1">微信订阅号</div>
+        <div class="wechat wechat-2">微信服务号</div>
+    </div>
+</footer>
+<!--<script src='../static/script/swiper/swiper-3.4.0.jquery.min.js'></script>-->
+<script>
+    $(function () {
+
+        var index = {
+            init: function () {
+                index.headerNavBind();
+
+                index.tabNavBind();
+
+                $(".txtMarquee-left").slide({
+                    mainCell: ".bd ul",
+                    autoPlay: true,
+                    effect: "leftMarquee",
+                    interTime: 10,
+                    trigger: "click"
+                });
+                $(".focusPic").slide({
+                    mainCell:".bd ul",
+                    autoPlay:true
+                });
+                //IE8的left兼容性
+                var windowW = $(window).width();
+                var hdW = $("#focusPic .hd").width();
+                $("#focusPic .hd").css("left",(windowW-hdW)/2);
+            },
+            headerNavBind: function () {
+                var navItem = $('.navbar .nav ul li');
+
+                navItem.on('click', function () {
+                    var _this = $(this);
+
+                    if (_this.hasClass('active')) {
+                        return false;
+                    } else {
+                        _this.addClass('active').siblings().removeClass('active');
+                    }
+                });
+            },
+            tabNavBind: function () {
+                var tabNavItem = $('.content .content-left .tabnav ul li');
+                tabNavItem.on('click', function () {
+                    var _this = $(this);
+                    var index = _this.index();
+                    $(".tablist ul").removeClass("show").addClass("hide");
+                    $(".tablist ul:eq(" + index + ")").removeClass("hide").addClass("show");
+                    if (_this.hasClass('active')) {
+                        return false;
+                    } else {
+                        _this.addClass('active').siblings().removeClass('active');
+                    }
+                });
+            }
+        };
+
+        index.init();
+    });
+</script>
+</body>
+</html>

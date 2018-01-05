@@ -1,0 +1,7 @@
+/**
+ * @author 
+ * @email 
+ * @descrip guojunqidai
+ * @version v1.0.0
+ */
+.container,body,html{position:relative}*{padding:0;margin:0;outline:0;-webkit-tap-highlight-color:transparent;border:none;font:inherit;vertical-align:baseline;word-wrap:break-word;font-family:"PingFang SC","Helvetica Neue",Helvetica,Arial,Verdana,"Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans CN",STHeiti,"Microsoft YaHei","WenQuanYi Micro Hei",SimSun,sans-serif}li,ol,ul{list-style:none}button,input,textarea{-webkit-appearance:none;background:0 0}button:-webkit-autofill,input:-webkit-autofill,textarea:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset}button::-webkit-search-cancel-button,input::-webkit-search-cancel-button,textarea::-webkit-search-cancel-button{display:none}:-moz-placeholder{color:#999}::-moz-placeholder{color:#999}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#999}input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#999}a{text-decoration:none;tap-highlight-color:transparent;focus-ring-color:transparent;-webkit-tap-highlight-color:transparent;-webkit-focus-ring-color:transparent;-moz-tap-highlight-color:transparent;-moz-focus-ring-color:transparent}img{display:block;margin:0 auto;max-width:100%;-webkit-tap-highlight-color:transparent}.clearfix:after,.clearfix:before{content:"";display:block;height:0;line-height:0;overflow:hidden;visibility:hidden}.clearfix:after{clear:both}html{font-size:14px;background-color:#F5F5F5}.container{width:1000px;margin:0 auto}
